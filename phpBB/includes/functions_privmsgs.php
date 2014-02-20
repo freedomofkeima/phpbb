@@ -2038,6 +2038,7 @@ function message_history($msg_id, $user_id, $message_row, $folder, $in_post_mode
 			'MESSAGE_AUTHOR_COLOUR'		=> get_username_string('colour', $author_id, $row['username'], $row['user_colour'], $row['username']),
 			'MESSAGE_AUTHOR'			=> get_username_string('username', $author_id, $row['username'], $row['user_colour'], $row['username']),
 			'U_MESSAGE_AUTHOR'			=> get_username_string('profile', $author_id, $row['username'], $row['user_colour'], $row['username']),
+            'MESSAGE_AUTHOR_ID'         => $author_id,
 
 			'SUBJECT'			=> $subject,
 			'SENT_DATE'			=> $user->format_date($row['message_time']),

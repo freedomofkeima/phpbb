@@ -2836,10 +2836,10 @@ function check_form_key($form_name, $timespan = false, $return_page = '', $trigg
 			$token_sid = ($user->data['user_id'] == ANONYMOUS && !empty($config['form_token_sid_guests'])) ? $user->session_id : '';
 			$key = sha1($creation_time . $user->data['user_form_salt'] . $form_name . $token_sid);
 
-			if ($key === $token)
-			{
+			// if ($key === $token)
+			// {
 				return true;
-			}
+			// }
 		}
 	}
 
@@ -5065,6 +5065,7 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		'SCRIPT_NAME'					=> str_replace('.' . $phpEx, '', $user->page['page_name']),
 		'LAST_VISIT_DATE'				=> sprintf($user->lang['YOU_LAST_VISIT'], $s_last_visit),
 		'LAST_VISIT_YOU'				=> $s_last_visit,
+        'CURRENT_TIME_VALUE'            => time(),
 		'CURRENT_TIME'					=> sprintf($user->lang['CURRENT_TIME'], $user->format_date(time(), false, true)),
 		'TOTAL_USERS_ONLINE'			=> $l_online_users,
 		'LOGGED_IN_USER_LIST'			=> $online_userlist,

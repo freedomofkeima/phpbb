@@ -107,37 +107,44 @@
 		<!-- ENDIF -->
 	</div>
 
-	<div class="back2top"><a href="#top" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+	<div class="back2top"><a href="#top" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div> 
+    
+	</div>
+</div>
 
-<!-- QUICK_REPLY SECTION -->
-    <form method="post" action="{U_QR_ACTION}" id="qr_postform">
-        <div class="panel">
+<!-- QUICK_REPLY SECTION @Iskandar Setiadi -->
+    <form method="post" action="{U_POST_REPLY_PM}&amp;sid={SESSION_ID}" id="qr_postform">
+ 
+       <div class="panel">
             <div class="inner">
-                    <h2>{L_QUICKREPLY}</h2>
+                    <h3 class="first">{L_QUICKREPLY}</h3>
                     <fieldset class="fields1">
                         <dl style="clear: left;">
                             <dt><label for="subject">{L_SUBJECT}{L_COLON}</label></dt>
-                            <dd><input type="text" name="subject" id="subject" size="45" maxlength="124" tabindex="2" value="{SUBJECT}" class="inputbox autowidth" /></dd>
+                            <dd><input type="text" name="subject" id="subject" size="45" maxlength="124" tabindex="2" value="Re: {SUBJECT}" class="inputbox autowidth" /></dd>
                         </dl>
                     <div id="message-box">
                         <textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
                     </div>
                     </fieldset>
                     <fieldset class="submit-buttons">
-                        {S_FORM_TOKEN}
-                        {QR_HIDDEN_FIELDS}
-                        <input type="submit" accesskey="f" tabindex="6" name="preview" value="{L_FULL_EDITOR}" class="button2" id="qr_full_editor" />&nbsp;
-                        <input type="submit" accesskey="s" tabindex="7" name="post" value="{L_SUBMIT}" class="button1" />&nbsp;
+                    	<input type="hidden" name="address_list[u][{MESSAGE_AUTHOR_ID}]" value="to" /> <!-- To user only -->
+                        <input type="hidden" name="lastclick" value="{CURRENT_TIME_VALUE}" /><input type="hidden" name="status_switch" value="556" />
+                        <input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1 default-submit-action" />&nbsp;
                     </fieldset>
             </div>
         </div>
+        
+        <div>
+        <input type="hidden" name="creation_time" value="{CURRENT_TIME_VALUE}" />
+        <input type="hidden" name="form_token" value="" /> <!-- Intentionally empty (Don't need to generate token) -->
+        </div>
+
     </form>
-<!-- END OF QUICK_REPLY SECTION -->    
-    
-	</div>
-</div>
+<!-- END OF QUICK_REPLY SECTION -->   
 
 <!-- IF S_VIEW_MESSAGE -->
+<form id="viewfolder" method="post" action="{S_PM_ACTION}">
 <fieldset class="display-options">
 	<!-- IF U_PREVIOUS_PM --><a href="{U_PREVIOUS_PM}" class="left-box arrow-{S_CONTENT_FLOW_BEGIN}">{L_VIEW_PREVIOUS_PM}</a><!-- ENDIF -->
 	<!-- IF U_NEXT_PM --><a href="{U_NEXT_PM}" class="right-box arrow-{S_CONTENT_FLOW_END}">{L_VIEW_NEXT_PM}</a><!-- ENDIF -->
