@@ -13,6 +13,9 @@
 /**
 * @ignore
 */
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(-1);
 define('IN_PHPBB', true);
 $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
@@ -56,7 +59,9 @@ if (($mark_notification = $request->variable('mark_notification', 0)))
 				$json_response->send(array(
 					'success'	=> true,
 				));
-			}
+			}ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(-1);
 
 			if (($redirect = $request->variable('redirect', '')))
 			{

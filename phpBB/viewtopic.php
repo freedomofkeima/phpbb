@@ -1041,9 +1041,9 @@ while ($row = $db->sql_fetchrow($result))
 	$rowset_data = array(
 		'hide_post'			=> (($row['foe'] || $row['post_visibility'] == ITEM_DELETED) && ($view != 'show' || $post_id != $row['post_id'])) ? true : false,
 
-		'post_id'			=> $row['post_id'],
+		'post_id'			=> $row['post_id'], //FLAG (post_id) 
 		'post_time'			=> $row['post_time'],
-		'user_id'			=> $row['user_id'],
+		'user_id'			=> $row['user_id'], //FLAG (user_id)
 		'username'			=> $row['username'],
 		'user_colour'		=> $row['user_colour'],
 		'topic_id'			=> $row['topic_id'],
