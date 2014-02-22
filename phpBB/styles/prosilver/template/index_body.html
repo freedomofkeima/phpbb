@@ -5,6 +5,15 @@
 
 <!-- EVENT index_body_linklist_before -->
 
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<!-- IF U_VIEWONLINE --><h3><a href="#">Newsbanner</a></h3><!-- ELSE --><h3>Newsbanner</h3><!-- ENDIF -->
+	<form>Keyword : <input type="text" name="keyword"> </form>
+	<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+	<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF --></p>
+<!-- ENDIF -->
+
+<!-- INCLUDE twitter.php -->
+
 <!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
 <ul class="linklist bulletin">
 	<!-- IF S_DISPLAY_SEARCH -->
@@ -44,6 +53,7 @@
 <!-- ENDIF -->
 
 <!-- EVENT index_body_stat_blocks_before -->
+
 
 <!-- IF S_DISPLAY_ONLINE_LIST -->
 	<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
