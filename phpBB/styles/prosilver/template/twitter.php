@@ -5,12 +5,15 @@
 	$accesstoken = "2341760491-QTt4ia2EuEiS3Wm8hXYLkfsNxheEwmJxJ6JnOFT";
 	$accesstokensecret = "FiawRqaGHhjhRKps6j9f4diBohYpzhZuzSJeKtau8bonM";
 
+	$i = 0;
+
 	$twitter = new TwitterOAuth($consumer, $consumer_secret, $accesstoken, $accesstokensecret);
-	$tweets = $twitter->get("https://api.twitter.com/1.1/search/tweets.json?q=fathan&result_type=recent&count=10");
+	$tweets = $twitter->get("https://api.twitter.com/1.1/search/tweets.json?q=detik.com&result_type=recent&count=51");
 	foreach ($tweets as $tweet) {
 		foreach ($tweet as $text) {
-			echo $text->text."<br>";
+			if ($i < 50)
+				echo "<li>".$text->text."<br>";
+			$i = $i + 1;
 		}
-		exit();
 	}
 <!-- ENDPHP -->

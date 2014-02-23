@@ -5,15 +5,6 @@
 
 <!-- EVENT index_body_linklist_before -->
 
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-	<!-- IF U_VIEWONLINE --><h3><a href="#">Newsbanner</a></h3><!-- ELSE --><h3>Newsbanner</h3><!-- ENDIF -->
-	<form>Keyword : <input type="text" name="keyword"> </form>
-	<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
-	<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF --></p>
-<!-- ENDIF -->
-
-<!-- INCLUDE twitter.php -->
-
 <!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
 <ul class="linklist bulletin">
 	<!-- IF S_DISPLAY_SEARCH -->
@@ -72,3 +63,5 @@
 <!-- ENDIF -->
 
 <!-- INCLUDE overall_footer.html -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>";
