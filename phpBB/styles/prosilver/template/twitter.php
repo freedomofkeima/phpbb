@@ -8,10 +8,10 @@
 	$i = 0;
 
 	$twitter = new TwitterOAuth($consumer, $consumer_secret, $accesstoken, $accesstokensecret);
-	$tweets = $twitter->get("https://api.twitter.com/1.1/search/tweets.json?q=detik.com&result_type=recent&count=51");
+	$tweets = $twitter->get("https://api.twitter.com/1.1/search/tweets.json?q=detik.com&result_type=recent&count=11");
 	foreach ($tweets as $tweet) {
 		foreach ($tweet as $text) {
-			if ($i < 50)
+			if ($i < 10)
 				echo "<li>".$text->text."<br>";
 			$i = $i + 1;
 		}
