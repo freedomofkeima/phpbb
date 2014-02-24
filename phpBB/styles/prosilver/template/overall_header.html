@@ -80,7 +80,6 @@
 
 		<div class="navbar">
 			<div class="inner">
-
 			<ul class="linklist navlinks">
 				<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
 				<li class="small-icon icon-home breadcrumbs"><!-- IF U_SITE_HOME --><span class="crumb"><a href="{U_SITE_HOME}"{$MICRODATA}>{L_SITE_HOME}</a> <strong>&#8249;</strong></span> <!-- ENDIF -->
@@ -170,7 +169,15 @@
 				<li class="small-icon icon-faq rightside no-bulletin"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}">{L_FAQ}</a></li>
 				<!-- EVENT overall_header_navigation_prepend -->
 			</ul>
-
+			<br><br>
+			<ul class="linklist navlinks">
+				Newsbanner <br>
+			</ul>
+			<ul class="linklist bulletin">
+				<!-- INCLUDE twitter.php -->
+				<br>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.berguru.com" data-text="Belajar? Berguru Aja" data-lang="id">Tweet</a>
+			</ul>
 			</div>
 		</div>
 
