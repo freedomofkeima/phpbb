@@ -1620,7 +1620,14 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 	$row2 = $db->sql_fetchrow($result);
 	$voters = $row2['jml_vote'];
 	
+	$poster = 'fathanpranaya';
+	$sqlthanks = "SELECT COUNT(DISTINCT `post_id`) FROM `phpbb_thanks` WHERE `user_id` = '".$poster."'";
+	$result = $db->sql_query($sqlthanks);
+    $row3 = $db->sql_fetchrow($result);
+    $nthanks = $row3['COUNT(DISTINCT `post_id`)'];
+
 	$post_row = array(
+		'NUM_THANKS'=> $nthanks,
 		'J_VOTER'=> $voters,
 		'R_VALUE' => $rating_rata2,
 		'POST_AUTHOR_FULL'		=> ($poster_id != ANONYMOUS) ? $user_cache[$poster_id]['author_full'] : get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']),
@@ -1637,7 +1644,7 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 		'POSTER_AVATAR'		=> $user_cache[$poster_id]['avatar'],
 		'POSTER_WARNINGS'	=> $user_cache[$poster_id]['warnings'],
 		'POSTER_AGE'		=> $user_cache[$poster_id]['age'],
-
+		
 		'POST_DATE'			=> $user->format_date($row['post_time'], false, ($view == 'print') ? true : false),
 		'POST_SUBJECT'		=> $row['post_subject'],
 		'MESSAGE'			=> $message,
