@@ -1620,7 +1620,7 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 	$row2 = $db->sql_fetchrow($result);
 	$voters = $row2['jml_vote'];
 	
-	$poster = 'fathanpranaya';
+	$poster = get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']);
 	$sqlthanks = "SELECT COUNT(DISTINCT `post_id`) FROM `phpbb_thanks` WHERE `user_id` = '".$poster."'";
 	$result = $db->sql_query($sqlthanks);
     $row3 = $db->sql_fetchrow($result);
