@@ -130,7 +130,73 @@
 		<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}{L_COLON}</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
 		<!-- IF postrow.POSTER_JOINED --><dd><strong>{L_JOINED}{L_COLON}</strong> {postrow.POSTER_JOINED}</dd><!-- ENDIF -->
 		<!-- IF postrow.POSTER_FROM --><dd><strong>{L_LOCATION}{L_COLON}</strong> {postrow.POSTER_FROM}</dd><!-- ENDIF -->
+		<dd><strong>Rating : {postrow.R_VALUE}/5 dari {postrow.J_VOTER} orang</strong></dd>
+		<dd><strong>
+	<script src="jquery-1.10.2.min.js"></script>		
+<style>
+      .rating {
+          overflow: hidden;
+          display: inline-block;
+      }
+      .rating-input {
+          position: absolute;
+          left: 0;
+          top: -50px;
+      }
+      .rating:hover .rating-star:hover,
+      .rating:hover .rating-star:hover ~ .rating-star,
+      .rating-input:checked ~ .rating-star {
+          background-position: 0 0;
+      }
+      .rating-star,
+      .rating:hover .rating-star {
+          float: right;
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url('star.png') 2px -16px;
+      }
+</style>
 
+<span class="rating">
+        <input type="radio" class="rating-input"
+            id="rating-input-1-5" name="rating-input-1" onClick="sendRating(5); return false;">
+        <label for="rating-input-1-5" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-4" name="rating-input-1" onClick="sendRating(4); return false;">
+        <label for="rating-input-1-4" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-3" name="rating-input-1">
+        <label for="rating-input-1-3" class="rating-star" onClick="sendRating(3); return false;"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-2" name="rating-input-1">
+        <label for="rating-input-1-2" class="rating-star" onClick="sendRating(2); return false;"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-1" name="rating-input-1">
+        <label for="rating-input-1-1" class="rating-star" onClick="sendRating(1); return false;"></label>
+    </span>
+	<br>
+    <span id="message"></span>
+
+<script>
+	function sendRating(X){
+		var post_id = {postrow.POST_ID};
+		$.ajax({
+			type:"POST",
+			url:"rating.php",
+			data:'id_topic='+post_id+'&rate='+X,
+			success:function(html) {
+				if (html == "OK") {
+					$("#message").html("Terima Kasih :)");
+					$(".rating").hide();
+				}
+				else $("#message").html(html);
+			}
+		});
+	}
+</script>
+
+		</strong></dd>
 		<!-- IF postrow.S_PROFILE_FIELD1 -->
 			<!-- Use a construct like this to include admin defined profile fields. Replace FIELD1 with the name of your field. -->
 			<dd><strong>{postrow.PROFILE_FIELD1_NAME}{L_COLON}</strong> {postrow.PROFILE_FIELD1_VALUE}</dd>
@@ -158,7 +224,15 @@
 			</dd>
 		<!-- ENDIF -->
 		<!-- ENDIF -->
-
+		<br>
+		<br> 
+		<dd><strong>Thanks Counter : </strong> {postrow.NUM_THANKS} </dd>		
+			<dd><form method="post" action="thanks.php">
+				<input type="hidden" value="{S_USERNAME}" name="thanker"/>
+				<input type="hidden" value="{postrow.POST_ID}" name="postid"/>
+				<input type="submit" value="Thanks" name="thanks_butt" />
+			</form>
+			</dd>
 		</dl>
 
 		<div class="postbody">
