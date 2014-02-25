@@ -1620,11 +1620,11 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 	$row2 = $db->sql_fetchrow($result);
 	$voters = $row2['jml_vote'];
 	
-	$poster = get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']);
-	$sqlthanks = "SELECT COUNT(DISTINCT `post_id`) FROM `phpbb_thanks` WHERE `user_id` = '".$poster."'";
+	$poster = get_username_string('username', $poster_id, $row['username'], $row['user_colour'], $row['post_username']);
+	$sqlthanks = "SELECT COUNT(`phpbb_thanks`.post_id) FROM `phpbb_thanks` JOIN `phpbb_posts` JOIN `phpbb_users` WHERE `phpbb_thanks`.post_id = `phpbb_posts`.post_id AND `phpbb_posts`.poster_id = `phpbb_users`.user_id AND `phpbb_users`.username='". $poster ."'";
 	$result = $db->sql_query($sqlthanks);
     $row3 = $db->sql_fetchrow($result);
-    $nthanks = $row3['COUNT(DISTINCT `post_id`)'];
+    $nthanks = $row3['COUNT(`phpbb_thanks`.post_id)'];
 
 	$post_row = array(
 		'NUM_THANKS'=> $nthanks,
