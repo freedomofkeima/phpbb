@@ -1,6 +1,6 @@
 <!-- INCLUDE ucp_header.html -->
 
-<h2>{L_TITLE}</h2>
+<h2>PROFILE</h2>
 
 <div class="panel">
 	<div class="inner">
@@ -55,18 +55,27 @@
 	<!-- END topicrow -->
 	</ul>
 <!-- ENDIF -->
-
-	<h3>{L_YOUR_DETAILS}</h3>
-
+<h2>{UCP_USERRANK} {UCP_USERNAME}</h2>
+<div id="profpic">
+	<img src="{UCP_PROFPIC}" width="200" height="200" />
+</div>
+<form action="upload_photo.php" method="post" enctype="multipart/form-data">
+			<label for="file"> Change Profile Picture: </label>
+			<input type="hidden" name="username" value="{UCP_USERNAME}" />
+			<input type="file" name="file" id="file" ><br>
+			<input type="submit" name="submit" Value="Upload" />
+		</form>
+	<div id="details">
 	<dl class="details">
-		<dt>{L_JOINED}{L_COLON}</dt> <dd>{JOINED}</dd>
-		<dt>{L_VISITED}{L_COLON}</dt> <dd>{LAST_VISIT_YOU}</dd>
-		<dt>{L_TOTAL_POSTS}{L_COLON}</dt> <dd><!-- IF POSTS_PCT -->{POSTS}<!-- IF S_DISPLAY_SEARCH --> | <strong><a href="{U_SEARCH_USER}">{L_SEARCH_YOUR_POSTS}</a></strong><!-- ENDIF --><br />({POSTS_DAY} / {POSTS_PCT})<!-- ELSE -->{POSTS}<!-- ENDIF --></dd>
-		<!-- IF ACTIVE_FORUM != '' --><dt>{L_ACTIVE_IN_FORUM}{L_COLON}</dt> <dd><strong><a href="{U_ACTIVE_FORUM}">{ACTIVE_FORUM}</a></strong><br />({ACTIVE_FORUM_POSTS} / {ACTIVE_FORUM_PCT})</dd><!-- ENDIF -->
-		<!-- IF ACTIVE_TOPIC != '' --><dt>{L_ACTIVE_IN_TOPIC}{L_COLON}</dt> <dd><strong><a href="{U_ACTIVE_TOPIC}">{ACTIVE_TOPIC}</a></strong><br />({ACTIVE_TOPIC_POSTS} / {ACTIVE_TOPIC_PCT})</dd><!-- ENDIF -->
-		<!-- IF WARNINGS --><dt>{L_YOUR_WARNINGS}{L_COLON}</dt> <dd class="error">{WARNING_IMG} [{WARNINGS}]</dd><!-- ENDIF -->
-	</dl>
+		<h3>Personal Information</h3>
+		<dt>Username</dt> <dd>{UCP_USERNAME}</dd>
+		<dt>Total Thanks</dt> <dd>{UCP_NUM_THANKS}</dd>
+		<dt>PIN BB</dt> <dd><strong>B2296A6629</string></dd>
+		<dt>Birthday</dt><dd> 2 August</dd>
+		<dt>Website</dt> <dd> {UCP_USERWEB} </dd>
 
+	</dl>
+	</div>
 	</div>
 </div>
 

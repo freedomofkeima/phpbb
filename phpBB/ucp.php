@@ -37,6 +37,37 @@ $template->assign_var('S_IN_UCP', true);
 $module = new p_master();
 $default = false;
 
+$poster = get_username_string('username', $poster_id, $row['username'], $row['user_colour'], $row['post_username']);
+ +	$sqlthanks = "SELECT COUNT(`phpbb_thanks`.post_id) FROM `phpbb_thanks` JOIN `phpbb_posts` JOIN `phpbb_users` WHERE `phpbb_thanks`.post_id = `phpbb_posts`.post_id AND `phpbb_posts`.poster_id = `phpbb_users`.user_id AND `phpbb_users`.username='". $poster ."'";
+$result = $db->sql_query($sqlthanks);
+$row3 = $db->sql_fetchrow($result);
+$nthanks = $row3['COUNT(`phpbb_thanks`.post_id)'];
+
+//Getting data for Profile Field
+$sqlprofileitems = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.username ='".$user->data['username']."'";
+$profileresult = $db->sql_query($sqlprofileitems);
+$row4 = $db->sql_fetchrow($profileresult);
+$db->sql_freeresult($profileresult);
+$userrank = $row4['user_rank'];
+$userweb = $row4['user_website'];
+$userprofpic = "./profpics/administrator.jpg";
+
+//Getting Pangkat Name
+$rankname = "SELECT * FROM `phpbb_ranks` WHERE `phpbb_ranks`.rank_id =".$userrank;
+$rankresult = $db->sql_query($rankname);
+$row5 = $db->sql_fetchrow($rankresult);
+$db->sql_freeresult($rankresult);
+$userrankname = $row5['rank_title'];
+
+
+$template->assign_vars(array(
+	'UCP_USERNAME'	=> $user->data['username'],
+	'UCP_NUM_THANKS'	=> $nthanks,
+	'UCP_USERRANK' => $userrankname,
+	'UCP_USERWEB' => $userweb,
+	'UCP_PROFPIC' => $userprofpic
+));
+
 // Basic "global" modes
 switch ($mode)
 {
@@ -315,7 +346,6 @@ if ($module->is_active('zebra', 'friends'))
 
 		$template->assign_block_vars("friends_{$which}", array(
 			'USER_ID'		=> $row['user_id'],
-
 			'U_PROFILE'		=> get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']),
 			'USER_COLOUR'	=> get_username_string('colour', $row['user_id'], $row['username'], $row['user_colour']),
 			'USERNAME'		=> get_username_string('username', $row['user_id'], $row['username'], $row['user_colour']),
