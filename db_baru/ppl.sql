@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.6deb1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Feb 24, 2014 at 02:21 AM
--- Server version: 5.5.35-0ubuntu0.13.10.2
--- PHP Version: 5.5.3-1ubuntu2.1
+-- Host: 127.0.0.1
+-- Generation Time: Mar 05, 2014 at 06:09 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -62,8 +62,8 @@ INSERT INTO `phpbb_acl_groups` (`group_id`, `forum_id`, `auth_option_id`, `auth_
 (5, 2, 0, 14, 0),
 (5, 2, 0, 10, 0),
 (6, 2, 0, 19, 0),
-(7, 0, 0, 23, 0),
-(7, 2, 0, 24, 0);
+(7, 2, 0, 24, 0),
+(7, 0, 0, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -230,30 +230,30 @@ CREATE TABLE IF NOT EXISTS `phpbb_acl_roles` (
 --
 
 INSERT INTO `phpbb_acl_roles` (`role_id`, `role_name`, `role_description`, `role_type`, `role_order`) VALUES
-(1, 'ROLE_ADMIN_STANDARD', 'ROLE_DESCRIPTION_ADMIN_STANDARD', 'a_', 1),
-(2, 'ROLE_ADMIN_FORUM', 'ROLE_DESCRIPTION_ADMIN_FORUM', 'a_', 3),
-(3, 'ROLE_ADMIN_USERGROUP', 'ROLE_DESCRIPTION_ADMIN_USERGROUP', 'a_', 4),
-(4, 'ROLE_ADMIN_FULL', 'ROLE_DESCRIPTION_ADMIN_FULL', 'a_', 2),
-(5, 'ROLE_USER_FULL', 'ROLE_DESCRIPTION_USER_FULL', 'u_', 3),
-(6, 'ROLE_USER_STANDARD', 'ROLE_DESCRIPTION_USER_STANDARD', 'u_', 1),
-(7, 'ROLE_USER_LIMITED', 'ROLE_DESCRIPTION_USER_LIMITED', 'u_', 2),
-(8, 'ROLE_USER_NOPM', 'ROLE_DESCRIPTION_USER_NOPM', 'u_', 4),
-(9, 'ROLE_USER_NOAVATAR', 'ROLE_DESCRIPTION_USER_NOAVATAR', 'u_', 5),
-(10, 'ROLE_MOD_FULL', 'ROLE_DESCRIPTION_MOD_FULL', 'm_', 3),
-(11, 'ROLE_MOD_STANDARD', 'ROLE_DESCRIPTION_MOD_STANDARD', 'm_', 1),
-(12, 'ROLE_MOD_SIMPLE', 'ROLE_DESCRIPTION_MOD_SIMPLE', 'm_', 2),
-(13, 'ROLE_MOD_QUEUE', 'ROLE_DESCRIPTION_MOD_QUEUE', 'm_', 4),
-(14, 'ROLE_FORUM_FULL', 'ROLE_DESCRIPTION_FORUM_FULL', 'f_', 7),
-(15, 'ROLE_FORUM_STANDARD', 'ROLE_DESCRIPTION_FORUM_STANDARD', 'f_', 5),
-(16, 'ROLE_FORUM_NOACCESS', 'ROLE_DESCRIPTION_FORUM_NOACCESS', 'f_', 1),
-(17, 'ROLE_FORUM_READONLY', 'ROLE_DESCRIPTION_FORUM_READONLY', 'f_', 2),
-(18, 'ROLE_FORUM_LIMITED', 'ROLE_DESCRIPTION_FORUM_LIMITED', 'f_', 3),
-(19, 'ROLE_FORUM_BOT', 'ROLE_DESCRIPTION_FORUM_BOT', 'f_', 9),
-(20, 'ROLE_FORUM_ONQUEUE', 'ROLE_DESCRIPTION_FORUM_ONQUEUE', 'f_', 8),
-(21, 'ROLE_FORUM_POLLS', 'ROLE_DESCRIPTION_FORUM_POLLS', 'f_', 6),
-(22, 'ROLE_FORUM_LIMITED_POLLS', 'ROLE_DESCRIPTION_FORUM_LIMITED_POLLS', 'f_', 4),
-(23, 'ROLE_USER_NEW_MEMBER', 'ROLE_DESCRIPTION_USER_NEW_MEMBER', 'u_', 6),
-(24, 'ROLE_FORUM_NEW_MEMBER', 'ROLE_DESCRIPTION_FORUM_NEW_MEMBER', 'f_', 10);
+(1, 'ROLE_ADMIN_STANDARD', 0x524f4c455f4445534352495054494f4e5f41444d494e5f5354414e44415244, 'a_', 1),
+(2, 'ROLE_ADMIN_FORUM', 0x524f4c455f4445534352495054494f4e5f41444d494e5f464f52554d, 'a_', 3),
+(3, 'ROLE_ADMIN_USERGROUP', 0x524f4c455f4445534352495054494f4e5f41444d494e5f5553455247524f5550, 'a_', 4),
+(4, 'ROLE_ADMIN_FULL', 0x524f4c455f4445534352495054494f4e5f41444d494e5f46554c4c, 'a_', 2),
+(5, 'ROLE_USER_FULL', 0x524f4c455f4445534352495054494f4e5f555345525f46554c4c, 'u_', 3),
+(6, 'ROLE_USER_STANDARD', 0x524f4c455f4445534352495054494f4e5f555345525f5354414e44415244, 'u_', 1),
+(7, 'ROLE_USER_LIMITED', 0x524f4c455f4445534352495054494f4e5f555345525f4c494d49544544, 'u_', 2),
+(8, 'ROLE_USER_NOPM', 0x524f4c455f4445534352495054494f4e5f555345525f4e4f504d, 'u_', 4),
+(9, 'ROLE_USER_NOAVATAR', 0x524f4c455f4445534352495054494f4e5f555345525f4e4f415641544152, 'u_', 5),
+(10, 'ROLE_MOD_FULL', 0x524f4c455f4445534352495054494f4e5f4d4f445f46554c4c, 'm_', 3),
+(11, 'ROLE_MOD_STANDARD', 0x524f4c455f4445534352495054494f4e5f4d4f445f5354414e44415244, 'm_', 1),
+(12, 'ROLE_MOD_SIMPLE', 0x524f4c455f4445534352495054494f4e5f4d4f445f53494d504c45, 'm_', 2),
+(13, 'ROLE_MOD_QUEUE', 0x524f4c455f4445534352495054494f4e5f4d4f445f5155455545, 'm_', 4),
+(14, 'ROLE_FORUM_FULL', 0x524f4c455f4445534352495054494f4e5f464f52554d5f46554c4c, 'f_', 7),
+(15, 'ROLE_FORUM_STANDARD', 0x524f4c455f4445534352495054494f4e5f464f52554d5f5354414e44415244, 'f_', 5),
+(16, 'ROLE_FORUM_NOACCESS', 0x524f4c455f4445534352495054494f4e5f464f52554d5f4e4f414343455353, 'f_', 1),
+(17, 'ROLE_FORUM_READONLY', 0x524f4c455f4445534352495054494f4e5f464f52554d5f524541444f4e4c59, 'f_', 2),
+(18, 'ROLE_FORUM_LIMITED', 0x524f4c455f4445534352495054494f4e5f464f52554d5f4c494d49544544, 'f_', 3),
+(19, 'ROLE_FORUM_BOT', 0x524f4c455f4445534352495054494f4e5f464f52554d5f424f54, 'f_', 9),
+(20, 'ROLE_FORUM_ONQUEUE', 0x524f4c455f4445534352495054494f4e5f464f52554d5f4f4e5155455545, 'f_', 8),
+(21, 'ROLE_FORUM_POLLS', 0x524f4c455f4445534352495054494f4e5f464f52554d5f504f4c4c53, 'f_', 6),
+(22, 'ROLE_FORUM_LIMITED_POLLS', 0x524f4c455f4445534352495054494f4e5f464f52554d5f4c494d495445445f504f4c4c53, 'f_', 4),
+(23, 'ROLE_USER_NEW_MEMBER', 0x524f4c455f4445534352495054494f4e5f555345525f4e45575f4d454d424552, 'u_', 6),
+(24, 'ROLE_FORUM_NEW_MEMBER', 0x524f4c455f4445534352495054494f4e5f464f52554d5f4e45575f4d454d424552, 'f_', 10);
 
 -- --------------------------------------------------------
 
@@ -919,6 +919,12 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('auth_flash_pm', '0', 0),
 ('auth_img_pm', '1', 0),
 ('auth_method', 'db', 0),
+('auth_oauth_bitly_key', '', 0),
+('auth_oauth_bitly_secret', '', 0),
+('auth_oauth_facebook_key', '', 0),
+('auth_oauth_facebook_secret', '', 0),
+('auth_oauth_google_key', '', 0),
+('auth_oauth_google_secret', '', 0),
 ('auth_smilies_pm', '1', 0),
 ('avatar_filesize', '6144', 0),
 ('avatar_gallery_path', 'images/avatars/gallery', 0),
@@ -927,22 +933,22 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('avatar_min_height', '20', 0),
 ('avatar_min_width', '20', 0),
 ('avatar_path', 'images/avatars/upload', 0),
-('avatar_salt', '35320782c98695600e9d0c9939d19e49', 0),
-('board_contact', 'habibiefaried@gmail.com', 0),
+('avatar_salt', '004306d628839f7d82c97ed91b73e494', 0),
+('board_contact', 'iskandarsetiadi@students.itb.ac.id', 0),
 ('board_disable', '0', 0),
 ('board_disable_msg', '', 0),
-('board_email', 'habibiefaried@gmail.com', 0),
+('board_email', 'iskandarsetiadi@students.itb.ac.id', 0),
 ('board_email_form', '0', 0),
 ('board_email_sig', 'Thanks, The Management', 0),
 ('board_hide_emails', '1', 0),
 ('board_index_text', '', 0),
-('board_startdate', '1392567433', 0),
+('board_startdate', '1392616419', 0),
 ('board_timezone', 'UTC', 0),
 ('browser_check', '1', 0),
 ('bump_interval', '10', 0),
 ('bump_type', 'd', 0),
 ('cache_gc', '7200', 0),
-('cache_last_gc', '1393206573', 1),
+('cache_last_gc', '1393295245', 1),
 ('captcha_gd', '1', 0),
 ('captcha_gd_3d_noise', '1', 0),
 ('captcha_gd_fonts', '1', 0),
@@ -956,7 +962,7 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('chg_passforce', '0', 0),
 ('confirm_refresh', '1', 0),
 ('cookie_domain', 'localhost', 0),
-('cookie_name', 'phpbb3_iwpr1', 0),
+('cookie_name', 'phpbb3_fh4o5', 0),
 ('cookie_path', '/', 0),
 ('cookie_secure', '0', 0),
 ('coppa_enable', '0', 0),
@@ -964,8 +970,8 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('coppa_mail', '', 0),
 ('cron_lock', '0', 1),
 ('database_gc', '604800', 0),
-('database_last_gc', '1393206576', 1),
-('dbms_version', '5.5.35-0ubuntu0.13.10.2', 0),
+('database_last_gc', '1393222716', 1),
+('dbms_version', '5.5.27', 0),
 ('default_dateformat', 'D M d, Y g:i a', 0),
 ('default_lang', 'en', 0),
 ('default_style', '1', 0),
@@ -1098,43 +1104,43 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('min_post_chars', '1', 0),
 ('min_search_author_chars', '3', 0),
 ('new_member_group_default', '0', 0),
-('new_member_post_limit', '3', 0),
-('newest_user_colour', 'AA0000', 1),
-('newest_user_id', '2', 1),
-('newest_username', 'root', 1),
+('new_member_post_limit', '0', 0),
+('newest_user_colour', '', 1),
+('newest_user_id', '48', 1),
+('newest_username', 'ryz', 1),
 ('num_files', '0', 1),
-('num_posts', '1', 1),
+('num_posts', '3', 1),
 ('num_topics', '1', 1),
-('num_users', '1', 1),
+('num_users', '2', 1),
 ('override_user_style', '0', 0),
 ('pass_complex', 'PASS_TYPE_ANY', 0),
 ('plupload_last_gc', '0', 1),
-('plupload_salt', 'a01062bafcd85bac0d16ffe147342f79', 0),
+('plupload_salt', 'd21407b276036cb5914c5566db78ef10', 0),
 ('pm_edit_time', '0', 0),
 ('pm_max_boxes', '4', 0),
 ('pm_max_msgs', '50', 0),
 ('pm_max_recipients', '0', 0),
 ('posts_per_page', '10', 0),
 ('print_pm', '1', 0),
-('questionnaire_unique_id', '45e1aaa28149bff5', 0),
+('questionnaire_unique_id', 'b53d3038132e58fa', 0),
 ('queue_interval', '60', 0),
-('rand_seed', 'bda0f728a68e87b9314c365c1a8c8bb8', 1),
-('rand_seed_last_update', '1393206933', 1),
+('rand_seed', 'cd442097b5987b91e72c127ea17e91e1', 1),
+('rand_seed_last_update', '1393295319', 1),
 ('ranks_path', 'images/ranks', 0),
 ('read_notification_expire_days', '30', 0),
 ('read_notification_gc', '86400', 0),
-('read_notification_last_gc', '1393206570', 1),
-('record_online_date', '1392567566', 1),
+('read_notification_last_gc', '1393222680', 1),
+('record_online_date', '1392616491', 1),
 ('record_online_users', '2', 1),
 ('referer_validation', '1', 0),
 ('require_activation', '0', 0),
-('script_path', '/phpbb/phpBB', 0),
+('script_path', '/phpBB/phpBB', 0),
 ('search_anonymous_interval', '0', 0),
 ('search_block_size', '250', 0),
 ('search_gc', '7200', 0),
 ('search_indexing_state', '', 1),
 ('search_interval', '0', 0),
-('search_last_gc', '1393206578', 1),
+('search_last_gc', '0', 1),
 ('search_store_results', '1800', 0),
 ('search_type', '\\phpbb\\search\\fulltext_native', 0),
 ('secure_allow_deny', '1', 0),
@@ -1144,7 +1150,7 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('server_port', '80', 0),
 ('server_protocol', 'http://', 0),
 ('session_gc', '3600', 0),
-('session_last_gc', '1393206818', 1),
+('session_last_gc', '1393295252', 1),
 ('session_length', '3600', 0),
 ('site_desc', 'A short text to describe your forum', 0),
 ('site_home_text', '', 0),
@@ -1161,7 +1167,7 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('teampage_forums', '1', 0),
 ('teampage_memberships', '1', 0),
 ('topics_per_page', '25', 0),
-('tpl_allow_php', '0', 0),
+('tpl_allow_php', '1', 0),
 ('upload_dir_size', '0', 1),
 ('upload_icons_path', 'images/upload_icons', 0),
 ('upload_path', 'files', 0),
@@ -1169,7 +1175,7 @@ INSERT INTO `phpbb_config` (`config_name`, `config_value`, `is_dynamic`) VALUES
 ('version', '3.1.0-a3-dev', 0),
 ('warnings_expire_days', '90', 0),
 ('warnings_gc', '14400', 0),
-('warnings_last_gc', '1393206933', 1);
+('warnings_last_gc', '1393295319', 1);
 
 -- --------------------------------------------------------
 
@@ -1424,8 +1430,8 @@ CREATE TABLE IF NOT EXISTS `phpbb_forums` (
 --
 
 INSERT INTO `phpbb_forums` (`forum_id`, `parent_id`, `left_id`, `right_id`, `forum_parents`, `forum_name`, `forum_desc`, `forum_desc_bitfield`, `forum_desc_options`, `forum_desc_uid`, `forum_link`, `forum_password`, `forum_style`, `forum_image`, `forum_rules`, `forum_rules_link`, `forum_rules_bitfield`, `forum_rules_options`, `forum_rules_uid`, `forum_topics_per_page`, `forum_type`, `forum_status`, `forum_posts_approved`, `forum_posts_unapproved`, `forum_posts_softdeleted`, `forum_topics_approved`, `forum_topics_unapproved`, `forum_topics_softdeleted`, `forum_last_post_id`, `forum_last_poster_id`, `forum_last_post_subject`, `forum_last_post_time`, `forum_last_poster_name`, `forum_last_poster_colour`, `forum_flags`, `forum_options`, `display_subforum_list`, `display_on_index`, `enable_indexing`, `enable_icons`, `enable_prune`, `prune_next`, `prune_days`, `prune_viewed`, `prune_freq`) VALUES
-(1, 0, 1, 4, '', 'Your first category', '', '', 7, '', '', '', 0, '', '', '', '', 7, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, '', 1392567433, 'root', 'AA0000', 32, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0),
-(2, 1, 2, 3, 'a:1:{i:1;a:2:{i:0;s:19:"Your first category";i:1;i:0;}}', 'Your first forum', 'Description of your first forum.', '', 7, '', '', '', 0, '', '', '', '', 7, '', 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 2, 'Welcome to phpBB3', 1392567433, 'root', 'AA0000', 48, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0);
+(1, 0, 1, 4, '', 'Your first category', '', '', 7, '', '', '', 0, '', '', '', '', 7, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, '', 1392616419, 'freedomofkeima', 'AA0000', 96, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0),
+(2, 1, 2, 3, 0x613a313a7b693a313b613a323a7b693a303b733a31393a22596f75722066697273742063617465676f7279223b693a313b693a303b7d7d, 'Your first forum', 0x4465736372697074696f6e206f6620796f757220666972737420666f72756d2e, '', 7, '', '', '', 0, '', '', '', '', 7, '', 0, 1, 0, 4, 0, 0, 1, 0, 0, 4, 2, 'Re: Welcome to phpBB3', 1393229238, 'freedomofkeima', 'AA0000', 112, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1458,7 +1464,8 @@ CREATE TABLE IF NOT EXISTS `phpbb_forums_track` (
 --
 
 INSERT INTO `phpbb_forums_track` (`user_id`, `forum_id`, `mark_time`) VALUES
-(2, 2, 1392567571);
+(2, 2, 1393229239),
+(48, 2, 1393229264);
 
 -- --------------------------------------------------------
 
@@ -1601,78 +1608,157 @@ CREATE TABLE IF NOT EXISTS `phpbb_log` (
   KEY `topic_id` (`topic_id`),
   KEY `reportee_id` (`reportee_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=66 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=145 ;
 
 --
 -- Dumping data for table `phpbb_log`
 --
 
 INSERT INTO `phpbb_log` (`log_id`, `log_type`, `user_id`, `forum_id`, `topic_id`, `reportee_id`, `log_ip`, `log_time`, `log_operation`, `log_data`) VALUES
-(1, 2, 2, 0, 0, 0, '127.0.0.1', 1392567471, 'LOG_ERROR_EMAIL', 'a:1:{i:0;s:96:"<strong>EMAIL/PHP/mail()</strong><br /><em>/phpbb/phpBB/install/index.php</em><br /><br /><br />";}'),
-(2, 0, 2, 0, 0, 0, '127.0.0.1', 1392567471, 'LOG_INSTALL_INSTALLED', 'a:1:{i:0;s:12:"3.1.0-a3-dev";}'),
-(3, 0, 2, 0, 0, 0, '127.0.0.1', 1392854827, 'LOG_ADMIN_AUTH_SUCCESS', ''),
-(4, 0, 2, 0, 0, 0, '127.0.0.1', 1392854836, 'LOG_PURGE_CACHE', ''),
-(5, 0, 2, 0, 0, 0, '127.0.0.1', 1392854919, 'LOG_PURGE_CACHE', ''),
-(6, 0, 2, 0, 0, 0, '127.0.0.1', 1392854921, 'LOG_PURGE_CACHE', ''),
-(7, 0, 2, 0, 0, 0, '127.0.0.1', 1392854921, 'LOG_PURGE_CACHE', ''),
-(8, 0, 2, 0, 0, 0, '127.0.0.1', 1392854921, 'LOG_PURGE_CACHE', ''),
-(9, 0, 2, 0, 0, 0, '127.0.0.1', 1392854921, 'LOG_PURGE_CACHE', ''),
-(10, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(11, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(12, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(13, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(14, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(15, 0, 2, 0, 0, 0, '127.0.0.1', 1392854922, 'LOG_PURGE_CACHE', ''),
-(16, 0, 2, 0, 0, 0, '127.0.0.1', 1392855103, 'LOG_PURGE_CACHE', ''),
-(17, 0, 2, 0, 0, 0, '127.0.0.1', 1392855186, 'LOG_PURGE_CACHE', ''),
-(18, 0, 2, 0, 0, 0, '127.0.0.1', 1392855295, 'LOG_PURGE_CACHE', ''),
-(19, 0, 2, 0, 0, 0, '127.0.0.1', 1392855341, 'LOG_PURGE_CACHE', ''),
-(20, 0, 2, 0, 0, 0, '127.0.0.1', 1392855517, 'LOG_PURGE_CACHE', ''),
-(21, 0, 2, 0, 0, 0, '127.0.0.1', 1392855535, 'LOG_PURGE_CACHE', ''),
-(22, 0, 2, 0, 0, 0, '127.0.0.1', 1392855555, 'LOG_PURGE_CACHE', ''),
-(23, 0, 2, 0, 0, 0, '127.0.0.1', 1392855566, 'LOG_PURGE_CACHE', ''),
-(24, 0, 2, 0, 0, 0, '127.0.0.1', 1392855582, 'LOG_PURGE_CACHE', ''),
-(25, 0, 2, 0, 0, 0, '127.0.0.1', 1392855583, 'LOG_PURGE_CACHE', ''),
-(26, 0, 2, 0, 0, 0, '127.0.0.1', 1392855583, 'LOG_PURGE_CACHE', ''),
-(27, 0, 2, 0, 0, 0, '127.0.0.1', 1392855583, 'LOG_PURGE_CACHE', ''),
-(28, 0, 2, 0, 0, 0, '127.0.0.1', 1392855606, 'LOG_PURGE_CACHE', ''),
-(29, 0, 2, 0, 0, 0, '127.0.0.1', 1392855619, 'LOG_PURGE_CACHE', ''),
-(30, 0, 2, 0, 0, 0, '127.0.0.1', 1392855685, 'LOG_PURGE_CACHE', ''),
-(31, 0, 2, 0, 0, 0, '127.0.0.1', 1392855728, 'LOG_PURGE_CACHE', ''),
-(32, 0, 2, 0, 0, 0, '127.0.0.1', 1392855772, 'LOG_PURGE_CACHE', ''),
-(33, 0, 2, 0, 0, 0, '127.0.0.1', 1392855786, 'LOG_PURGE_CACHE', ''),
-(34, 0, 2, 0, 0, 0, '127.0.0.1', 1392855797, 'LOG_PURGE_CACHE', ''),
-(35, 0, 2, 0, 0, 0, '127.0.0.1', 1392855817, 'LOG_PURGE_CACHE', ''),
-(36, 0, 2, 0, 0, 0, '127.0.0.1', 1392855837, 'LOG_PURGE_CACHE', ''),
-(37, 0, 2, 0, 0, 0, '127.0.0.1', 1392855873, 'LOG_PURGE_CACHE', ''),
-(38, 0, 2, 0, 0, 0, '127.0.0.1', 1392855893, 'LOG_PURGE_CACHE', ''),
-(39, 0, 2, 0, 0, 0, '127.0.0.1', 1392857435, 'LOG_PURGE_CACHE', ''),
-(40, 0, 2, 0, 0, 0, '127.0.0.1', 1393155654, 'LOG_ADMIN_AUTH_SUCCESS', ''),
-(41, 0, 2, 0, 0, 0, '127.0.0.1', 1393155659, 'LOG_PURGE_CACHE', ''),
-(42, 0, 2, 0, 0, 0, '127.0.0.1', 1393155694, 'LOG_PURGE_CACHE', ''),
-(43, 0, 2, 0, 0, 0, '127.0.0.1', 1393155710, 'LOG_PURGE_CACHE', ''),
-(44, 0, 2, 0, 0, 0, '127.0.0.1', 1393155759, 'LOG_PURGE_CACHE', ''),
-(45, 0, 2, 0, 0, 0, '127.0.0.1', 1393156042, 'LOG_PURGE_CACHE', ''),
-(46, 0, 2, 0, 0, 0, '127.0.0.1', 1393156868, 'LOG_PURGE_CACHE', ''),
-(47, 0, 2, 0, 0, 0, '127.0.0.1', 1393156991, 'LOG_PURGE_CACHE', ''),
-(48, 0, 2, 0, 0, 0, '127.0.0.1', 1393157020, 'LOG_PURGE_CACHE', ''),
-(49, 0, 2, 0, 0, 0, '127.0.0.1', 1393157033, 'LOG_PURGE_CACHE', ''),
-(50, 0, 2, 0, 0, 0, '127.0.0.1', 1393157154, 'LOG_PURGE_CACHE', ''),
-(51, 0, 2, 0, 0, 0, '127.0.0.1', 1393157197, 'LOG_PURGE_CACHE', ''),
-(52, 0, 2, 0, 0, 0, '127.0.0.1', 1393206820, 'LOG_ADMIN_AUTH_SUCCESS', ''),
-(53, 0, 2, 0, 0, 0, '127.0.0.1', 1393206930, 'LOG_PURGE_CACHE', ''),
-(54, 0, 2, 0, 0, 0, '127.0.0.1', 1393206972, 'LOG_PURGE_CACHE', ''),
-(55, 0, 2, 0, 0, 0, '127.0.0.1', 1393207018, 'LOG_PURGE_CACHE', ''),
-(56, 0, 2, 0, 0, 0, '127.0.0.1', 1393207071, 'LOG_PURGE_CACHE', ''),
-(57, 0, 2, 0, 0, 0, '127.0.0.1', 1393207873, 'LOG_PURGE_CACHE', ''),
-(58, 0, 2, 0, 0, 0, '127.0.0.1', 1393207957, 'LOG_PURGE_CACHE', ''),
-(59, 0, 2, 0, 0, 0, '127.0.0.1', 1393207972, 'LOG_PURGE_CACHE', ''),
-(60, 0, 2, 0, 0, 0, '127.0.0.1', 1393207993, 'LOG_PURGE_CACHE', ''),
-(61, 0, 2, 0, 0, 0, '127.0.0.1', 1393208031, 'LOG_PURGE_CACHE', ''),
-(62, 0, 2, 0, 0, 0, '127.0.0.1', 1393208099, 'LOG_PURGE_CACHE', ''),
-(63, 0, 2, 0, 0, 0, '127.0.0.1', 1393208147, 'LOG_PURGE_CACHE', ''),
-(64, 0, 2, 0, 0, 0, '127.0.0.1', 1393208163, 'LOG_PURGE_CACHE', ''),
-(65, 0, 2, 0, 0, 0, '127.0.0.1', 1393208181, 'LOG_PURGE_CACHE', '');
+(1, 0, 2, 0, 0, 0, '127.0.0.1', 1392616462, 0x4c4f475f494e5354414c4c5f494e5354414c4c4544, 0x613a313a7b693a303b733a31323a22332e312e302d61332d646576223b7d),
+(2, 0, 2, 0, 0, 0, '127.0.0.1', 1392848430, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(3, 0, 2, 0, 0, 0, '127.0.0.1', 1392848692, 0x4c4f475f434f4e4649475f504f5354, ''),
+(4, 0, 2, 0, 0, 0, '127.0.0.1', 1392850711, 0x4c4f475f50555247455f4341434845, ''),
+(5, 0, 2, 0, 0, 0, '127.0.0.1', 1392859689, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(6, 0, 2, 0, 0, 0, '127.0.0.1', 1392860065, 0x4c4f475f50555247455f4341434845, ''),
+(7, 0, 2, 0, 0, 0, '127.0.0.1', 1392860126, 0x4c4f475f50555247455f4341434845, ''),
+(8, 0, 2, 0, 0, 0, '127.0.0.1', 1392860187, 0x4c4f475f50555247455f4341434845, ''),
+(9, 0, 2, 0, 0, 0, '127.0.0.1', 1392860298, 0x4c4f475f50555247455f4341434845, ''),
+(10, 0, 2, 0, 0, 0, '127.0.0.1', 1392860664, 0x4c4f475f50555247455f4341434845, ''),
+(11, 0, 2, 0, 0, 0, '127.0.0.1', 1392860735, 0x4c4f475f50555247455f4341434845, ''),
+(12, 0, 2, 0, 0, 0, '127.0.0.1', 1392861272, 0x4c4f475f50555247455f4341434845, ''),
+(13, 0, 2, 0, 0, 0, '127.0.0.1', 1392862391, 0x4c4f475f50555247455f4341434845, ''),
+(14, 0, 2, 0, 0, 0, '127.0.0.1', 1392862452, 0x4c4f475f50555247455f4341434845, ''),
+(15, 0, 2, 0, 0, 0, '127.0.0.1', 1392864646, 0x4c4f475f50555247455f4341434845, ''),
+(16, 0, 2, 0, 0, 0, '127.0.0.1', 1392864704, 0x4c4f475f50555247455f4341434845, ''),
+(17, 0, 2, 0, 0, 0, '127.0.0.1', 1392864707, 0x4c4f475f50555247455f4341434845, ''),
+(18, 0, 2, 0, 0, 0, '127.0.0.1', 1392865160, 0x4c4f475f50555247455f4341434845, ''),
+(19, 0, 2, 0, 0, 0, '127.0.0.1', 1392865165, 0x4c4f475f50555247455f4341434845, ''),
+(20, 0, 2, 0, 0, 0, '127.0.0.1', 1392865182, 0x4c4f475f50555247455f4341434845, ''),
+(21, 0, 2, 0, 0, 0, '127.0.0.1', 1392873184, 0x4c4f475f50555247455f4341434845, ''),
+(22, 0, 2, 0, 0, 0, '127.0.0.1', 1392873208, 0x4c4f475f50555247455f4341434845, ''),
+(23, 0, 2, 0, 0, 0, '127.0.0.1', 1392873440, 0x4c4f475f50555247455f4341434845, ''),
+(24, 0, 2, 0, 0, 0, '127.0.0.1', 1392873498, 0x4c4f475f50555247455f4341434845, ''),
+(25, 0, 2, 0, 0, 0, '127.0.0.1', 1392873517, 0x4c4f475f50555247455f4341434845, ''),
+(26, 0, 2, 0, 0, 0, '127.0.0.1', 1392873830, 0x4c4f475f50555247455f4341434845, ''),
+(27, 0, 2, 0, 0, 0, '127.0.0.1', 1392873941, 0x4c4f475f50555247455f4341434845, ''),
+(28, 0, 2, 0, 0, 0, '127.0.0.1', 1392873983, 0x4c4f475f50555247455f4341434845, ''),
+(29, 0, 2, 0, 0, 0, '127.0.0.1', 1392873999, 0x4c4f475f50555247455f4341434845, ''),
+(30, 0, 2, 0, 0, 0, '127.0.0.1', 1392874047, 0x4c4f475f50555247455f4341434845, ''),
+(31, 0, 2, 0, 0, 0, '127.0.0.1', 1392874064, 0x4c4f475f50555247455f4341434845, ''),
+(32, 0, 2, 0, 0, 0, '127.0.0.1', 1392874272, 0x4c4f475f50555247455f4341434845, ''),
+(33, 0, 2, 0, 0, 0, '127.0.0.1', 1392874607, 0x4c4f475f50555247455f4341434845, ''),
+(34, 0, 2, 0, 0, 0, '127.0.0.1', 1392874875, 0x4c4f475f50555247455f4341434845, ''),
+(35, 0, 2, 0, 0, 0, '127.0.0.1', 1392875103, 0x4c4f475f50555247455f4341434845, ''),
+(36, 0, 2, 0, 0, 0, '127.0.0.1', 1392875493, 0x4c4f475f50555247455f4341434845, ''),
+(37, 0, 2, 0, 0, 0, '127.0.0.1', 1392875522, 0x4c4f475f50555247455f4341434845, ''),
+(38, 0, 2, 0, 0, 0, '127.0.0.1', 1392875542, 0x4c4f475f50555247455f4341434845, ''),
+(39, 0, 2, 0, 0, 0, '127.0.0.1', 1392875971, 0x4c4f475f50555247455f4341434845, ''),
+(40, 0, 2, 0, 0, 0, '127.0.0.1', 1392875980, 0x4c4f475f50555247455f4341434845, ''),
+(41, 0, 2, 0, 0, 0, '127.0.0.1', 1392876132, 0x4c4f475f50555247455f4341434845, ''),
+(42, 0, 2, 0, 0, 0, '127.0.0.1', 1392876219, 0x4c4f475f50555247455f4341434845, ''),
+(43, 0, 2, 0, 0, 0, '127.0.0.1', 1392876339, 0x4c4f475f50555247455f4341434845, ''),
+(44, 0, 2, 0, 0, 0, '127.0.0.1', 1392876836, 0x4c4f475f50555247455f4341434845, ''),
+(45, 0, 2, 0, 0, 0, '127.0.0.1', 1392876852, 0x4c4f475f50555247455f4341434845, ''),
+(46, 0, 2, 0, 0, 0, '127.0.0.1', 1392876891, 0x4c4f475f50555247455f4341434845, ''),
+(47, 0, 2, 0, 0, 0, '127.0.0.1', 1392877965, 0x4c4f475f50555247455f4341434845, ''),
+(48, 0, 2, 0, 0, 0, '127.0.0.1', 1392878366, 0x4c4f475f50555247455f4341434845, ''),
+(49, 0, 2, 0, 0, 0, '127.0.0.1', 1392878447, 0x4c4f475f50555247455f4341434845, ''),
+(50, 0, 2, 0, 0, 0, '127.0.0.1', 1392878543, 0x4c4f475f50555247455f4341434845, ''),
+(51, 0, 2, 0, 0, 0, '127.0.0.1', 1392878906, 0x4c4f475f50555247455f4341434845, ''),
+(52, 0, 2, 0, 0, 0, '127.0.0.1', 1392879020, 0x4c4f475f50555247455f4341434845, ''),
+(53, 0, 2, 0, 0, 0, '127.0.0.1', 1392879062, 0x4c4f475f50555247455f4341434845, ''),
+(54, 0, 2, 0, 0, 0, '127.0.0.1', 1392879342, 0x4c4f475f50555247455f4341434845, ''),
+(55, 0, 2, 0, 0, 0, '127.0.0.1', 1392879463, 0x4c4f475f50555247455f4341434845, ''),
+(56, 0, 2, 0, 0, 0, '127.0.0.1', 1392879490, 0x4c4f475f50555247455f4341434845, ''),
+(57, 0, 2, 0, 0, 0, '127.0.0.1', 1392879502, 0x4c4f475f50555247455f4341434845, ''),
+(58, 0, 2, 0, 0, 0, '127.0.0.1', 1392879793, 0x4c4f475f50555247455f4341434845, ''),
+(59, 0, 2, 0, 0, 0, '127.0.0.1', 1392879824, 0x4c4f475f50555247455f4341434845, ''),
+(60, 0, 2, 0, 0, 0, '127.0.0.1', 1392880074, 0x4c4f475f50555247455f4341434845, ''),
+(61, 0, 2, 0, 0, 0, '127.0.0.1', 1392880081, 0x4c4f475f50555247455f4341434845, ''),
+(62, 0, 2, 0, 0, 0, '127.0.0.1', 1392880232, 0x4c4f475f50555247455f4341434845, ''),
+(63, 0, 2, 0, 0, 0, '127.0.0.1', 1392880376, 0x4c4f475f50555247455f4341434845, ''),
+(64, 0, 2, 0, 0, 0, '127.0.0.1', 1392880585, 0x4c4f475f50555247455f4341434845, ''),
+(65, 0, 2, 0, 0, 0, '127.0.0.1', 1392880703, 0x4c4f475f50555247455f4341434845, ''),
+(66, 0, 2, 0, 0, 0, '127.0.0.1', 1392880921, 0x4c4f475f50555247455f4341434845, ''),
+(67, 0, 2, 0, 0, 0, '127.0.0.1', 1392881200, 0x4c4f475f50555247455f4341434845, ''),
+(68, 0, 2, 0, 0, 0, '127.0.0.1', 1392881239, 0x4c4f475f50555247455f4341434845, ''),
+(69, 0, 2, 0, 0, 0, '127.0.0.1', 1392881460, 0x4c4f475f50555247455f4341434845, ''),
+(70, 0, 2, 0, 0, 0, '127.0.0.1', 1392881463, 0x4c4f475f50555247455f4341434845, ''),
+(71, 0, 2, 0, 0, 0, '127.0.0.1', 1392881475, 0x4c4f475f50555247455f4341434845, ''),
+(72, 0, 2, 0, 0, 0, '127.0.0.1', 1392881568, 0x4c4f475f50555247455f4341434845, ''),
+(73, 0, 2, 0, 0, 0, '127.0.0.1', 1392881958, 0x4c4f475f50555247455f4341434845, ''),
+(74, 0, 2, 0, 0, 0, '127.0.0.1', 1392881960, 0x4c4f475f50555247455f4341434845, ''),
+(75, 0, 2, 0, 0, 0, '127.0.0.1', 1392882002, 0x4c4f475f50555247455f4341434845, ''),
+(76, 0, 2, 0, 0, 0, '127.0.0.1', 1392882102, 0x4c4f475f50555247455f4341434845, ''),
+(77, 0, 2, 0, 0, 0, '127.0.0.1', 1392882161, 0x4c4f475f50555247455f4341434845, ''),
+(78, 0, 2, 0, 0, 0, '127.0.0.1', 1392882788, 0x4c4f475f50555247455f4341434845, ''),
+(79, 0, 2, 0, 0, 0, '127.0.0.1', 1392882862, 0x4c4f475f50555247455f4341434845, ''),
+(80, 0, 2, 0, 0, 0, '127.0.0.1', 1392882890, 0x4c4f475f50555247455f4341434845, ''),
+(81, 0, 2, 0, 0, 0, '127.0.0.1', 1392882902, 0x4c4f475f50555247455f4341434845, ''),
+(82, 0, 2, 0, 0, 0, '127.0.0.1', 1392882913, 0x4c4f475f50555247455f4341434845, ''),
+(83, 0, 2, 0, 0, 0, '127.0.0.1', 1392882979, 0x4c4f475f50555247455f4341434845, ''),
+(84, 0, 2, 0, 0, 0, '127.0.0.1', 1392883253, 0x4c4f475f50555247455f4341434845, ''),
+(85, 0, 2, 0, 0, 0, '127.0.0.1', 1392883385, 0x4c4f475f50555247455f4341434845, ''),
+(86, 0, 2, 0, 0, 0, '127.0.0.1', 1392883810, 0x4c4f475f434f4e4649475f4c4f4144, ''),
+(87, 0, 2, 0, 0, 0, '127.0.0.1', 1392883888, 0x4c4f475f50555247455f4341434845, ''),
+(88, 0, 2, 0, 0, 0, '127.0.0.1', 1392883914, 0x4c4f475f50555247455f4341434845, ''),
+(89, 0, 2, 0, 0, 0, '127.0.0.1', 1392883950, 0x4c4f475f50555247455f4341434845, ''),
+(90, 0, 2, 0, 0, 0, '127.0.0.1', 1392884102, 0x4c4f475f434f4e4649475f4c4f4144, ''),
+(91, 0, 2, 0, 0, 0, '127.0.0.1', 1392884401, 0x4c4f475f50555247455f4341434845, ''),
+(92, 0, 2, 0, 0, 0, '127.0.0.1', 1392884652, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(93, 0, 2, 0, 0, 0, '127.0.0.1', 1392884679, 0x4c4f475f434f4e4649475f524547495354524154494f4e, ''),
+(94, 1, 2, 2, 1, 0, '127.0.0.1', 1392884742, 0x4c4f475f504f53545f415050524f564544, 0x613a313a7b693a303b733a32313a2252653a2057656c636f6d6520746f20706870424233223b7d),
+(95, 0, 2, 0, 0, 0, '127.0.0.1', 1392884778, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(96, 0, 2, 0, 0, 0, '127.0.0.1', 1392884862, 0x4c4f475f41434c5f5452414e534645525f5045524d495353494f4e53, 0x613a313a7b693a303b733a333a2272797a223b7d),
+(97, 0, 2, 0, 0, 0, '127.0.0.1', 1392884883, 0x4c4f475f41434c5f524553544f52455f5045524d495353494f4e53, 0x613a313a7b693a303b733a333a2272797a223b7d),
+(98, 0, 2, 0, 0, 0, '127.0.0.1', 1392884938, 0x4c4f475f41434c5f4144445f47524f55505f474c4f42414c5f555f, 0x613a313a7b693a303b733a34373a223c7370616e20636c6173733d22736570223e4e65776c7920726567697374657265642075736572733c2f7370616e3e223b7d),
+(99, 0, 2, 0, 0, 0, '127.0.0.1', 1393135798, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(100, 0, 2, 0, 0, 0, '127.0.0.1', 1393135824, 0x4c4f475f50555247455f4341434845, ''),
+(101, 0, 2, 0, 0, 0, '127.0.0.1', 1393137709, 0x4c4f475f434f4e4649475f4c4f4144, ''),
+(102, 0, 2, 0, 0, 0, '127.0.0.1', 1393137736, 0x4c4f475f434f4e4649475f4c4f4144, ''),
+(103, 0, 2, 0, 0, 0, '127.0.0.1', 1393137961, 0x4c4f475f50555247455f4341434845, ''),
+(104, 0, 2, 0, 0, 0, '127.0.0.1', 1393138006, 0x4c4f475f50555247455f4341434845, ''),
+(105, 0, 2, 0, 0, 0, '127.0.0.1', 1393138187, 0x4c4f475f50555247455f4341434845, ''),
+(106, 0, 2, 0, 0, 0, '127.0.0.1', 1393138516, 0x4c4f475f50555247455f4341434845, ''),
+(107, 0, 2, 0, 0, 0, '127.0.0.1', 1393138654, 0x4c4f475f50555247455f4341434845, ''),
+(108, 0, 2, 0, 0, 0, '127.0.0.1', 1393138684, 0x4c4f475f50555247455f4341434845, ''),
+(109, 0, 2, 0, 0, 0, '127.0.0.1', 1393138715, 0x4c4f475f50555247455f4341434845, ''),
+(110, 0, 2, 0, 0, 0, '127.0.0.1', 1393138720, 0x4c4f475f50555247455f4341434845, ''),
+(111, 0, 2, 0, 0, 0, '127.0.0.1', 1393138723, 0x4c4f475f50555247455f4341434845, ''),
+(112, 0, 2, 0, 0, 0, '127.0.0.1', 1393138802, 0x4c4f475f50555247455f4341434845, ''),
+(113, 0, 2, 0, 0, 0, '127.0.0.1', 1393138806, 0x4c4f475f50555247455f4341434845, ''),
+(114, 0, 2, 0, 0, 0, '127.0.0.1', 1393138837, 0x4c4f475f50555247455f4341434845, ''),
+(115, 0, 2, 0, 0, 0, '127.0.0.1', 1393138948, 0x4c4f475f50555247455f4341434845, ''),
+(116, 0, 2, 0, 0, 0, '127.0.0.1', 1393138998, 0x4c4f475f50555247455f4341434845, ''),
+(117, 0, 2, 0, 0, 0, '127.0.0.1', 1393139082, 0x4c4f475f434f4e4649475f5345435552495459, ''),
+(118, 0, 2, 0, 0, 0, '127.0.0.1', 1393139086, 0x4c4f475f50555247455f4341434845, ''),
+(119, 0, 2, 0, 0, 0, '127.0.0.1', 1393139184, 0x4c4f475f50555247455f4341434845, ''),
+(120, 0, 2, 0, 0, 0, '127.0.0.1', 1393139200, 0x4c4f475f50555247455f4341434845, ''),
+(121, 0, 2, 0, 0, 0, '127.0.0.1', 1393139203, 0x4c4f475f50555247455f4341434845, ''),
+(122, 0, 2, 0, 0, 0, '127.0.0.1', 1393139254, 0x4c4f475f50555247455f4341434845, ''),
+(123, 0, 2, 0, 0, 0, '127.0.0.1', 1393139278, 0x4c4f475f50555247455f4341434845, ''),
+(124, 0, 2, 0, 0, 0, '127.0.0.1', 1393139311, 0x4c4f475f50555247455f4341434845, ''),
+(125, 0, 2, 0, 0, 0, '127.0.0.1', 1393139655, 0x4c4f475f50555247455f4341434845, ''),
+(126, 0, 2, 0, 0, 0, '127.0.0.1', 1393140015, 0x4c4f475f50555247455f4341434845, ''),
+(127, 0, 2, 0, 0, 0, '127.0.0.1', 1393140066, 0x4c4f475f50555247455f4341434845, ''),
+(128, 0, 2, 0, 0, 0, '127.0.0.1', 1393140184, 0x4c4f475f50555247455f4341434845, ''),
+(129, 0, 2, 0, 0, 0, '127.0.0.1', 1393140278, 0x4c4f475f50555247455f4341434845, ''),
+(130, 0, 2, 0, 0, 0, '127.0.0.1', 1393226016, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(131, 0, 2, 0, 0, 0, '127.0.0.1', 1393226038, 0x4c4f475f50555247455f4341434845, ''),
+(132, 0, 2, 0, 0, 0, '127.0.0.1', 1393227238, 0x4c4f475f50555247455f4341434845, ''),
+(133, 0, 2, 0, 0, 0, '127.0.0.1', 1393227284, 0x4c4f475f50555247455f4341434845, ''),
+(134, 0, 2, 0, 0, 0, '127.0.0.1', 1393227788, 0x4c4f475f434f4e4649475f5345435552495459, ''),
+(135, 0, 2, 0, 0, 0, '127.0.0.1', 1393244787, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(136, 0, 2, 0, 0, 0, '127.0.0.1', 1393244807, 0x4c4f475f50555247455f4341434845, ''),
+(137, 0, 2, 0, 0, 0, '127.0.0.1', 1393244995, 0x4c4f475f50555247455f4341434845, ''),
+(138, 0, 2, 0, 0, 0, '127.0.0.1', 1393261392, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(139, 0, 2, 0, 0, 0, '127.0.0.1', 1393277223, 0x4c4f475f41444d494e5f415554485f53554343455353, ''),
+(140, 0, 2, 0, 0, 0, '127.0.0.1', 1393277422, 0x4c4f475f434f4e4649475f41555448, ''),
+(141, 0, 2, 0, 0, 0, '127.0.0.1', 1393277543, 0x4c4f475f434f4e4649475f41555448, ''),
+(142, 0, 2, 0, 0, 0, '127.0.0.1', 1393277924, 0x4c4f475f434f4e4649475f41555448, ''),
+(143, 0, 2, 0, 0, 0, '127.0.0.1', 1393277930, 0x4c4f475f50555247455f4341434845, ''),
+(144, 0, 2, 0, 0, 0, '127.0.0.1', 1393278235, 0x4c4f475f434f4e4649475f41555448, '');
 
 -- --------------------------------------------------------
 
@@ -1716,79 +1802,79 @@ CREATE TABLE IF NOT EXISTS `phpbb_migrations` (
 --
 
 INSERT INTO `phpbb_migrations` (`migration_name`, `migration_depends_on`, `migration_schema_done`, `migration_data_done`, `migration_data_state`, `migration_start_time`, `migration_end_time`) VALUES
-('\\phpbb\\db\\migration\\data\\v30x\\local_url_bbcode', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc3";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc2', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc3', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc2";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc2";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc1', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc2', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc3";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc1', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc2', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc3', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc2";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1_rc1', 'a:0:{}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc2";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5', 'a:1:{i:0;s:52:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1part2";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1part2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc4";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc3', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc2";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc4', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc3";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc2";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_pl1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc1";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8_rc1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8_rc1', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_pl1";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc4";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc1', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8";}', 1, 1, '', 1392567472, 1392567472),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc2', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc1";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc3', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc2";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc4', 'a:1:{i:0;s:47:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc3";}', 1, 1, '', 1392567471, 1392567471),
-('\\phpbb\\db\\migration\\data\\v310\\acp_style_components_module', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\allow_cdn', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v310\\jquery_update";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\alpha1', 'a:18:{i:0;s:46:"\\phpbb\\db\\migration\\data\\v30x\\local_url_bbcode";i:1;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12";i:2;s:57:"\\phpbb\\db\\migration\\data\\v310\\acp_style_components_module";i:3;s:39:"\\phpbb\\db\\migration\\data\\v310\\allow_cdn";i:4;s:49:"\\phpbb\\db\\migration\\data\\v310\\auth_provider_oauth";i:5;s:37:"\\phpbb\\db\\migration\\data\\v310\\avatars";i:6;s:40:"\\phpbb\\db\\migration\\data\\v310\\boardindex";i:7;s:44:"\\phpbb\\db\\migration\\data\\v310\\config_db_text";i:8;s:45:"\\phpbb\\db\\migration\\data\\v310\\forgot_password";i:9;s:41:"\\phpbb\\db\\migration\\data\\v310\\mod_rewrite";i:10;s:49:"\\phpbb\\db\\migration\\data\\v310\\mysql_fulltext_drop";i:11;s:40:"\\phpbb\\db\\migration\\data\\v310\\namespaces";i:12;s:48:"\\phpbb\\db\\migration\\data\\v310\\notifications_cron";i:13;s:60:"\\phpbb\\db\\migration\\data\\v310\\notification_options_reconvert";i:14;s:38:"\\phpbb\\db\\migration\\data\\v310\\plupload";i:15;s:51:"\\phpbb\\db\\migration\\data\\v310\\signature_module_auth";i:16;s:52:"\\phpbb\\db\\migration\\data\\v310\\softdelete_mcp_modules";i:17;s:38:"\\phpbb\\db\\migration\\data\\v310\\teampage";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\alpha2', 'a:2:{i:0;s:36:"\\phpbb\\db\\migration\\data\\v310\\alpha1";i:1;s:51:"\\phpbb\\db\\migration\\data\\v310\\notifications_cron_p2";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\auth_provider_oauth', 'a:0:{}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\avatar_types', 'a:2:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";i:1;s:37:"\\phpbb\\db\\migration\\data\\v310\\avatars";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\avatars', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\boardindex', 'a:0:{}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\config_db_text', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\dev', 'a:4:{i:0;s:40:"\\phpbb\\db\\migration\\data\\v310\\extensions";i:1;s:45:"\\phpbb\\db\\migration\\data\\v310\\style_update_p2";i:2;s:41:"\\phpbb\\db\\migration\\data\\v310\\timezone_p2";i:3;s:52:"\\phpbb\\db\\migration\\data\\v310\\reported_posts_display";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\extensions', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\forgot_password', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\jquery_update', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\mod_rewrite', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\mysql_fulltext_drop', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\namespaces', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\notification_options_reconvert', 'a:1:{i:0;s:54:"\\phpbb\\db\\migration\\data\\v310\\notifications_schema_fix";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\notifications', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\notifications_cron', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v310\\notifications";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\notifications_cron_p2', 'a:1:{i:0;s:48:"\\phpbb\\db\\migration\\data\\v310\\notifications_cron";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\notifications_schema_fix', 'a:1:{i:0;s:43:"\\phpbb\\db\\migration\\data\\v310\\notifications";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\plupload', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\reported_posts_display', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\signature_module_auth', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\softdelete_mcp_modules', 'a:2:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";i:1;s:43:"\\phpbb\\db\\migration\\data\\v310\\softdelete_p2";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\softdelete_p1', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\softdelete_p2', 'a:2:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";i:1;s:43:"\\phpbb\\db\\migration\\data\\v310\\softdelete_p1";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\style_update_p1', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\style_update_p2', 'a:1:{i:0;s:45:"\\phpbb\\db\\migration\\data\\v310\\style_update_p1";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\teampage', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\timezone', 'a:1:{i:0;s:44:"\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11";}', 1, 1, '', 1392567473, 1392567473),
-('\\phpbb\\db\\migration\\data\\v310\\timezone_p2', 'a:1:{i:0;s:38:"\\phpbb\\db\\migration\\data\\v310\\timezone";}', 1, 1, '', 1392567474, 1392567474),
-('\\phpbb\\db\\migration\\data\\v310\\ucp_popuppm_module', 'a:1:{i:0;s:33:"\\phpbb\\db\\migration\\data\\v310\\dev";}', 1, 1, '', 1392567474, 1392567474);
+('\\phpbb\\db\\migration\\data\\v30x\\local_url_bbcode', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31325f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f315f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31305f726333223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f39223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc2', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31305f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_10_rc3', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31305f726332223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31315f726332223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc1', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3130223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_11_rc2', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31315f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31325f726333223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc1', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc2', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31325f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_12_rc3', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31325f726332223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_1_rc1', 0x613a303a7b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f325f726332223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f31223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_2_rc2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f325f726331223b7d, 1, 1, '', 1392616462, 1392616462),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f335f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_3_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f32223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f345f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_4_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f33223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5', 0x613a313a7b693a303b733a35323a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f355f7263317061727432223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f34223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_5_rc1part2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f355f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f365f726334223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f35223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f365f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc3', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f365f726332223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_6_rc4', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f365f726333223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f375f726332223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_pl1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f37223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f36223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_7_rc2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f375f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f385f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_8_rc1', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f375f706c31223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f395f726334223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc1', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f38223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc2', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f395f726331223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc3', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f395f726332223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v30x\\release_3_0_9_rc4', 0x613a313a7b693a303b733a34373a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f395f726333223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\acp_style_components_module', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\allow_cdn', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6a71756572795f757064617465223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\alpha1', 0x613a31383a7b693a303b733a34363a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c6c6f63616c5f75726c5f6262636f6465223b693a313b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3132223b693a323b733a35373a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6163705f7374796c655f636f6d706f6e656e74735f6d6f64756c65223b693a333b733a33393a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c616c6c6f775f63646e223b693a343b733a34393a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c617574685f70726f76696465725f6f61757468223b693a353b733a33373a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c61766174617273223b693a363b733a34303a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c626f617264696e646578223b693a373b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c636f6e6669675f64625f74657874223b693a383b733a34353a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c666f72676f745f70617373776f7264223b693a393b733a34313a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6d6f645f72657772697465223b693a31303b733a34393a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6d7973716c5f66756c6c746578745f64726f70223b693a31313b733a34303a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e616d65737061636573223b693a31323b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e735f63726f6e223b693a31333b733a36303a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e5f6f7074696f6e735f7265636f6e76657274223b693a31343b733a33383a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c706c75706c6f6164223b693a31353b733a35313a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c7369676e61747572655f6d6f64756c655f61757468223b693a31363b733a35323a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c736f667464656c6574655f6d63705f6d6f64756c6573223b693a31373b733a33383a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c7465616d70616765223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\alpha2', 0x613a323a7b693a303b733a33363a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c616c70686131223b693a313b733a35313a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e735f63726f6e5f7032223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\auth_provider_oauth', 0x613a303a7b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\avatar_types', 0x613a323a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b693a313b733a33373a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c61766174617273223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\avatars', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\boardindex', 0x613a303a7b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\config_db_text', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616463, 1392616463),
+('\\phpbb\\db\\migration\\data\\v310\\dev', 0x613a343a7b693a303b733a34303a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c657874656e73696f6e73223b693a313b733a34353a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c7374796c655f7570646174655f7032223b693a323b733a34313a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c74696d657a6f6e655f7032223b693a333b733a35323a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c7265706f727465645f706f7374735f646973706c6179223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\extensions', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\forgot_password', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\jquery_update', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\mod_rewrite', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\mysql_fulltext_drop', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\namespaces', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\notification_options_reconvert', 0x613a313a7b693a303b733a35343a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e735f736368656d615f666978223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\notifications', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\notifications_cron', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e73223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\notifications_cron_p2', 0x613a313a7b693a303b733a34383a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e735f63726f6e223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\notifications_schema_fix', 0x613a313a7b693a303b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c6e6f74696669636174696f6e73223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\plupload', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\reported_posts_display', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\signature_module_auth', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\softdelete_mcp_modules', 0x613a323a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b693a313b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c736f667464656c6574655f7032223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\softdelete_p1', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\softdelete_p2', 0x613a323a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b693a313b733a34333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c736f667464656c6574655f7031223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\style_update_p1', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\style_update_p2', 0x613a313a7b693a303b733a34353a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c7374796c655f7570646174655f7031223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\teampage', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\timezone', 0x613a313a7b693a303b733a34343a225c70687062625c64625c6d6967726174696f6e5c646174615c763330785c72656c656173655f335f305f3131223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\timezone_p2', 0x613a313a7b693a303b733a33383a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c74696d657a6f6e65223b7d, 1, 1, '', 1392616464, 1392616464),
+('\\phpbb\\db\\migration\\data\\v310\\ucp_popuppm_module', 0x613a313a7b693a303b733a33333a225c70687062625c64625c6d6967726174696f6e5c646174615c763331305c646576223b7d, 1, 1, '', 1392616464, 1392616464);
 
 -- --------------------------------------------------------
 
@@ -2061,7 +2147,17 @@ CREATE TABLE IF NOT EXISTS `phpbb_notifications` (
   PRIMARY KEY (`notification_id`),
   KEY `item_ident` (`notification_type_id`,`item_id`),
   KEY `user` (`user_id`,`notification_read`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `phpbb_notifications`
+--
+
+INSERT INTO `phpbb_notifications` (`notification_id`, `notification_type_id`, `item_id`, `item_parent_id`, `user_id`, `notification_read`, `notification_time`, `notification_data`) VALUES
+(1, 7, 6, 0, 48, 1, 1392884536, 0x613a323a7b733a31323a2266726f6d5f757365725f6964223b733a313a2232223b733a31353a226d6573736167655f7375626a656374223b733a31343a2248656c6c6f204e65772055736572223b7d),
+(3, 7, 7, 0, 2, 1, 1392884960, 0x613a323a7b733a31323a2266726f6d5f757365725f6964223b733a323a223438223b733a31353a226d6573736167655f7375626a656374223b733a31383a2252653a2048656c6c6f204e65772055736572223b7d),
+(4, 7, 8, 0, 48, 1, 1392884978, 0x613a323a7b733a31323a2266726f6d5f757365725f6964223b733a313a2232223b733a31353a226d6573736167655f7375626a656374223b733a32323a2252653a2052653a2048656c6c6f204e65772055736572223b7d),
+(5, 7, 9, 0, 48, 0, 1393223118, 0x613a323a7b733a31323a2266726f6d5f757365725f6964223b733a313a2232223b733a31353a226d6573736167655f7375626a656374223b733a32323a2252653a2052653a2048656c6c6f204e65772055736572223b7d);
 
 -- --------------------------------------------------------
 
@@ -2088,11 +2184,11 @@ INSERT INTO `phpbb_notification_types` (`notification_type_id`, `notification_ty
 (4, 'bookmark', 1),
 (5, 'post', 1),
 (6, 'approve_post', 1),
-(7, 'disapprove_post', 1),
-(8, 'disapprove_topic', 1),
-(9, 'group_request', 1),
-(10, 'group_request_approved', 1),
-(11, 'pm', 1),
+(7, 'pm', 1),
+(8, 'disapprove_post', 1),
+(9, 'disapprove_topic', 1),
+(10, 'group_request', 1),
+(11, 'group_request_approved', 1),
 (12, 'post_in_queue', 1),
 (13, 'report_pm', 1),
 (14, 'report_pm_closed', 1),
@@ -2204,14 +2300,17 @@ CREATE TABLE IF NOT EXISTS `phpbb_posts` (
   KEY `post_visibility` (`post_visibility`),
   KEY `post_username` (`post_username`),
   KEY `tid_post_time` (`topic_id`,`post_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `phpbb_posts`
 --
 
 INSERT INTO `phpbb_posts` (`post_id`, `topic_id`, `forum_id`, `poster_id`, `icon_id`, `poster_ip`, `post_time`, `post_visibility`, `post_reported`, `enable_bbcode`, `enable_smilies`, `enable_magic_url`, `enable_sig`, `post_username`, `post_subject`, `post_text`, `post_checksum`, `post_attachment`, `bbcode_bitfield`, `bbcode_uid`, `post_postcount`, `post_edit_time`, `post_edit_reason`, `post_edit_user`, `post_edit_count`, `post_edit_locked`, `post_delete_time`, `post_delete_reason`, `post_delete_user`) VALUES
-(1, 1, 2, 2, 0, '127.0.0.1', 1392567433, 1, 0, 1, 1, 1, 1, '', 'Welcome to phpBB3', 'This is an example post in your phpBB3 installation. Everything seems to be working. You may delete this post if you like and continue to set up your board. During the installation process your first category and your first forum are assigned an appropriate set of permissions for the predefined usergroups administrators, bots, global moderators, guests, registered users and registered COPPA users. If you also choose to delete your first category and your first forum, do not forget to assign permissions for all these usergroups for all new categories and forums you create. It is recommended to rename your first category and your first forum and copy permissions from these while creating new categories and forums. Have fun!', '5dd683b17f641daf84c040bfefc58ce9', 0, '', '', 1, 0, '', 0, 0, 0, 0, '', 0);
+(1, 1, 2, 2, 0, '127.0.0.1', 1392616419, 1, 0, 1, 1, 1, 1, '', 'Welcome to phpBB3', 0x5468697320697320616e206578616d706c6520706f737420696e20796f75722070687042423320696e7374616c6c6174696f6e2e2045766572797468696e67207365656d7320746f20626520776f726b696e672e20596f75206d61792064656c657465207468697320706f737420696620796f75206c696b6520616e6420636f6e74696e756520746f2073657420757020796f757220626f6172642e20447572696e672074686520696e7374616c6c6174696f6e2070726f6365737320796f75722066697273742063617465676f727920616e6420796f757220666972737420666f72756d206172652061737369676e656420616e20617070726f70726961746520736574206f66207065726d697373696f6e7320666f722074686520707265646566696e6564207573657267726f7570732061646d696e6973747261746f72732c20626f74732c20676c6f62616c206d6f64657261746f72732c206775657374732c207265676973746572656420757365727320616e64207265676973746572656420434f5050412075736572732e20496620796f7520616c736f2063686f6f736520746f2064656c65746520796f75722066697273742063617465676f727920616e6420796f757220666972737420666f72756d2c20646f206e6f7420666f7267657420746f2061737369676e207065726d697373696f6e7320666f7220616c6c207468657365207573657267726f75707320666f7220616c6c206e65772063617465676f7269657320616e6420666f72756d7320796f75206372656174652e204974206973207265636f6d6d656e64656420746f2072656e616d6520796f75722066697273742063617465676f727920616e6420796f757220666972737420666f72756d20616e6420636f7079207065726d697373696f6e732066726f6d207468657365207768696c65206372656174696e67206e65772063617465676f7269657320616e6420666f72756d732e20486176652066756e21, '5dd683b17f641daf84c040bfefc58ce9', 0, '', '', 1, 0, '', 0, 0, 0, 0, '', 0),
+(2, 1, 2, 2, 0, '127.0.0.1', 1392876559, 1, 0, 1, 1, 1, 1, '', 'Re: Welcome to phpBB3', 0x48656865, '25c1e46d60ff28f51bd0d8f80010ea87', 0, '', '1ejnst4q', 1, 0, '', 0, 0, 0, 0, '', 0),
+(3, 1, 2, 48, 0, '127.0.0.1', 1392884718, 1, 0, 1, 1, 1, 1, '', 'Re: Welcome to phpBB3', 0x48656c6c6f203c212d2d20733a44202d2d3e3c696d67207372633d227b534d494c4945535f504154487d2f69636f6e5f655f6269676772696e2e6769662220616c743d223a4422207469746c653d225665727920486170707922202f3e3c212d2d20733a44202d2d3e, '61ad624569f4af3f8e837080a4488ac0', 0, '', 'wjcp4qqa', 1, 0, '', 0, 0, 0, 1392884742, '', 2),
+(4, 1, 2, 2, 0, '127.0.0.1', 1393229238, 1, 0, 1, 1, 1, 1, '', 'Re: Welcome to phpBB3', 0x48616c6f204a656c656b, 'abd68696c43e2706a4684161386c12e4', 0, '', '24sbot6e', 1, 0, '', 0, 0, 0, 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2247,7 +2346,22 @@ CREATE TABLE IF NOT EXISTS `phpbb_privmsgs` (
   KEY `message_time` (`message_time`),
   KEY `author_id` (`author_id`),
   KEY `root_level` (`root_level`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `phpbb_privmsgs`
+--
+
+INSERT INTO `phpbb_privmsgs` (`msg_id`, `root_level`, `author_id`, `icon_id`, `author_ip`, `message_time`, `enable_bbcode`, `enable_smilies`, `enable_magic_url`, `enable_sig`, `message_subject`, `message_text`, `message_edit_reason`, `message_edit_user`, `message_attachment`, `bbcode_bitfield`, `bbcode_uid`, `message_edit_time`, `message_edit_count`, `to_address`, `bcc_address`, `message_reported`) VALUES
+(1, 0, 2, 0, '127.0.0.1', 1392848332, 1, 1, 1, 1, 'Test Message', 0x48656c6c6f21, '', 0, 0, '', '2z1upvoi', 0, 0, 0x755f32, '', 0),
+(2, 0, 2, 0, '127.0.0.1', 1392865232, 1, 1, 1, 1, 'Test Message 2', 0x4861686121, '', 0, 0, '', '3jdem4kz', 0, 0, 0x755f32, '', 0),
+(3, 2, 2, 0, '127.0.0.1', 1392877705, 1, 1, 1, 1, 'Re: Test Message 2', 0x6b7261756b206b7261756b, '', 0, 0, '', '2zk7m17w', 0, 0, 0x755f32, '', 0),
+(4, 2, 2, 0, '127.0.0.1', 1392877946, 1, 1, 1, 0, 'Re: Test Message 2', 0x6d757761686168616861, '', 0, 0, '', '16ukjj3z', 0, 0, 0x755f32, '', 0),
+(5, 2, 2, 0, '127.0.0.1', 1392879075, 1, 1, 1, 0, 'Re: Test Message 2', 0x74657374, '', 0, 0, '', '20owf5ij', 0, 0, 0x755f32, '', 0),
+(6, 0, 2, 0, '127.0.0.1', 1392884535, 1, 1, 1, 1, 'Hello New User', 0x48656c6c6f21, '', 0, 0, '', 'po2e0z8v', 0, 0, 0x755f3438, '', 0),
+(7, 6, 48, 0, '127.0.0.1', 1392884960, 1, 1, 1, 0, 'Re: Hello New User', 0x48656c6c6f2066726565646f6d6f666b65696d6121, '', 0, 0, '', '1b9cxiww', 0, 0, 0x755f32, '', 0),
+(8, 6, 2, 0, '127.0.0.1', 1392884978, 1, 1, 1, 0, 'Re: Re: Hello New User', 0x48656c6c6f20746f6f2072797a21, '', 0, 0, '', '1esibqp1', 0, 0, 0x755f3438, '', 0),
+(9, 6, 2, 0, '127.0.0.1', 1393223118, 1, 1, 1, 0, 'Re: Re: Hello New User', 0x487565687565, '', 0, 0, '', '1kns7g3s', 0, 0, 0x755f3438, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2305,6 +2419,29 @@ CREATE TABLE IF NOT EXISTS `phpbb_privmsgs_to` (
   KEY `author_id` (`author_id`),
   KEY `usr_flder_id` (`user_id`,`folder_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `phpbb_privmsgs_to`
+--
+
+INSERT INTO `phpbb_privmsgs_to` (`msg_id`, `user_id`, `author_id`, `pm_deleted`, `pm_new`, `pm_unread`, `pm_replied`, `pm_marked`, `pm_forwarded`, `folder_id`) VALUES
+(1, 2, 2, 0, 0, 0, 0, 0, 0, 0),
+(1, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(2, 2, 2, 0, 0, 0, 1, 0, 0, 0),
+(2, 2, 2, 0, 0, 0, 1, 0, 0, -1),
+(3, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(4, 2, 2, 0, 0, 0, 0, 0, 0, 0),
+(4, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(5, 2, 2, 0, 0, 0, 0, 0, 0, 0),
+(5, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(6, 48, 2, 0, 0, 0, 1, 0, 0, 0),
+(6, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(7, 2, 48, 0, 0, 0, 1, 0, 0, 0),
+(7, 48, 48, 0, 0, 0, 0, 0, 0, -1),
+(8, 48, 2, 0, 0, 0, 0, 0, 0, 0),
+(8, 2, 2, 0, 0, 0, 0, 0, 0, -1),
+(9, 48, 2, 0, 1, 1, 0, 0, 0, -3),
+(9, 2, 2, 0, 0, 0, 0, 0, 0, -2);
 
 -- --------------------------------------------------------
 
@@ -2447,10 +2584,10 @@ CREATE TABLE IF NOT EXISTS `phpbb_reports_reasons` (
 --
 
 INSERT INTO `phpbb_reports_reasons` (`reason_id`, `reason_title`, `reason_description`, `reason_order`) VALUES
-(1, 'warez', 'The post contains links to illegal or pirated software.', 1),
-(2, 'spam', 'The reported post has the only purpose to advertise for a website or another product.', 2),
-(3, 'off_topic', 'The reported post is off topic.', 3),
-(4, 'other', 'The reported post does not fit into any other category, please use the further information field.', 4);
+(1, 'warez', 0x54686520706f737420636f6e7461696e73206c696e6b7320746f20696c6c6567616c206f72207069726174656420736f6674776172652e, 1),
+(2, 'spam', 0x546865207265706f7274656420706f73742068617320746865206f6e6c7920707572706f736520746f2061647665727469736520666f7220612077656273697465206f7220616e6f746865722070726f647563742e, 2),
+(3, 'off_topic', 0x546865207265706f7274656420706f7374206973206f666620746f7069632e, 3),
+(4, 'other', 0x546865207265706f7274656420706f737420646f6573206e6f742066697420696e746f20616e79206f746865722063617465676f72792c20706c656173652075736520746865206675727468657220696e666f726d6174696f6e206669656c642e, 4);
 
 -- --------------------------------------------------------
 
@@ -2480,7 +2617,7 @@ CREATE TABLE IF NOT EXISTS `phpbb_search_wordlist` (
   PRIMARY KEY (`word_id`),
   UNIQUE KEY `wrd_txt` (`word_text`),
   KEY `wrd_cnt` (`word_count`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=63 ;
 
 --
 -- Dumping data for table `phpbb_search_wordlist`
@@ -2491,7 +2628,7 @@ INSERT INTO `phpbb_search_wordlist` (`word_id`, `word_text`, `word_common`, `wor
 (2, 'example', 0, 1),
 (3, 'post', 0, 1),
 (4, 'your', 0, 1),
-(5, 'phpbb3', 0, 2),
+(5, 'phpbb3', 0, 5),
 (6, 'installation', 0, 1),
 (7, 'everything', 0, 1),
 (8, 'seems', 0, 1),
@@ -2544,7 +2681,11 @@ INSERT INTO `phpbb_search_wordlist` (`word_id`, `word_text`, `word_common`, `wor
 (55, 'creating', 0, 1),
 (56, 'have', 0, 1),
 (57, 'fun', 0, 1),
-(58, 'welcome', 0, 1);
+(58, 'welcome', 0, 4),
+(59, 'hehe', 0, 1),
+(60, 'hello', 0, 1),
+(61, 'halo', 0, 1),
+(62, 'jelek', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2572,6 +2713,9 @@ INSERT INTO `phpbb_search_wordmatch` (`post_id`, `word_id`, `title_match`) VALUE
 (1, 4, 0),
 (1, 5, 0),
 (1, 5, 1),
+(2, 5, 1),
+(3, 5, 1),
+(4, 5, 1),
 (1, 6, 0),
 (1, 7, 0),
 (1, 8, 0),
@@ -2624,7 +2768,14 @@ INSERT INTO `phpbb_search_wordmatch` (`post_id`, `word_id`, `title_match`) VALUE
 (1, 55, 0),
 (1, 56, 0),
 (1, 57, 0),
-(1, 58, 1);
+(1, 58, 1),
+(2, 58, 1),
+(3, 58, 1),
+(4, 58, 1),
+(2, 59, 0),
+(3, 60, 0),
+(4, 61, 0),
+(4, 62, 0);
 
 -- --------------------------------------------------------
 
@@ -2657,8 +2808,9 @@ CREATE TABLE IF NOT EXISTS `phpbb_sessions` (
 --
 
 INSERT INTO `phpbb_sessions` (`session_id`, `session_user_id`, `session_forum_id`, `session_last_visit`, `session_start`, `session_time`, `session_ip`, `session_browser`, `session_forwarded_for`, `session_page`, `session_viewonline`, `session_autologin`, `session_admin`) VALUES
-('6a5675ecd96f931f4eb7e2902aeb67af', 1, 0, 1393206568, 1393206568, 1393206568, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:26.0) Gecko/20100101 Firefox/26.0', '', 'app.php/r', 1, 0, 0),
-('ca610e5ad32d464a8c00923f51d6c90c', 2, 2, 1393157209, 1393206820, 1393208278, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:26.0) Gecko/20100101 Firefox/26.0', '', 'viewtopic.php?f=2&t=1', 1, 0, 1);
+('6167b42c6046823a977df178abf6a008', 2, 0, 1393262797, 1393295251, 1393295489, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36', '', 'memberlist.php?mode=viewprofile&u=2', 1, 0, 0),
+('d69857a136cba089774308a5b8eae152', 1, 2, 1393295216, 1393295216, 1393295216, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36', '', 'viewforum.php?f=2', 1, 0, 0),
+('dcbcd927ebeb6ac084d4b65d94db0aab', 1, 2, 1393295206, 1393295206, 1393295206, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36', '', 'viewforum.php?f=2', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2808,6 +2960,28 @@ INSERT INTO `phpbb_teampage` (`teampage_id`, `group_id`, `teampage_name`, `teamp
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `phpbb_thanks`
+--
+
+CREATE TABLE IF NOT EXISTS `phpbb_thanks` (
+  `user_id` varchar(20) NOT NULL,
+  `post_id` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `phpbb_thanks`
+--
+
+INSERT INTO `phpbb_thanks` (`user_id`, `post_id`) VALUES
+('fathanpranaya', '1'),
+('freedomofkeima', '1'),
+('freedomofkeima', '3'),
+('freedomofkeima', '4'),
+('ryz', '4');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `phpbb_topics`
 --
 
@@ -2864,7 +3038,7 @@ CREATE TABLE IF NOT EXISTS `phpbb_topics` (
 --
 
 INSERT INTO `phpbb_topics` (`topic_id`, `forum_id`, `icon_id`, `topic_attachment`, `topic_visibility`, `topic_reported`, `topic_title`, `topic_poster`, `topic_time`, `topic_time_limit`, `topic_views`, `topic_posts_approved`, `topic_posts_unapproved`, `topic_posts_softdeleted`, `topic_status`, `topic_type`, `topic_first_post_id`, `topic_first_poster_name`, `topic_first_poster_colour`, `topic_last_post_id`, `topic_last_poster_id`, `topic_last_poster_name`, `topic_last_poster_colour`, `topic_last_post_subject`, `topic_last_post_time`, `topic_last_view_time`, `topic_moved_id`, `topic_bumped`, `topic_bumper`, `poll_title`, `poll_start`, `poll_length`, `poll_max_options`, `poll_last_vote`, `poll_vote_change`, `topic_delete_time`, `topic_delete_reason`, `topic_delete_user`) VALUES
-(1, 2, 0, 0, 1, 0, 'Welcome to phpBB3 muach muach muach', 2, 1392567433, 0, 57, 1, 0, 0, 0, 0, 1, 'root', 'AA0000', 1, 2, 'root', 'AA0000', 'Welcome to phpBB3', 1392567433, 1393208278, 0, 0, 0, '', 0, 0, 1, 0, 0, 0, '', 0);
+(1, 2, 0, 0, 1, 0, 'Welcome to phpBB3', 2, 1392616419, 0, 33, 4, 0, 0, 0, 0, 1, 'freedomofkeima', 'AA0000', 4, 2, 'freedomofkeima', 'AA0000', 'Re: Welcome to phpBB3', 1393229238, 1393295366, 0, 0, 0, '', 0, 0, 1, 0, 0, 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2884,7 +3058,8 @@ CREATE TABLE IF NOT EXISTS `phpbb_topics_posted` (
 --
 
 INSERT INTO `phpbb_topics_posted` (`user_id`, `topic_id`, `topic_posted`) VALUES
-(2, 1, 1);
+(2, 1, 1),
+(48, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3028,60 +3203,61 @@ CREATE TABLE IF NOT EXISTS `phpbb_users` (
   KEY `user_birthday` (`user_birthday`),
   KEY `user_email_hash` (`user_email_hash`),
   KEY `user_type` (`user_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `phpbb_users`
 --
 
 INSERT INTO `phpbb_users` (`user_id`, `user_type`, `group_id`, `user_permissions`, `user_perm_from`, `user_ip`, `user_regdate`, `username`, `username_clean`, `user_password`, `user_passchg`, `user_pass_convert`, `user_email`, `user_email_hash`, `user_birthday`, `user_lastvisit`, `user_lastmark`, `user_lastpost_time`, `user_lastpage`, `user_last_confirm_key`, `user_last_search`, `user_warnings`, `user_last_warning`, `user_login_attempts`, `user_inactive_reason`, `user_inactive_time`, `user_posts`, `user_lang`, `user_timezone`, `user_dateformat`, `user_style`, `user_rank`, `user_colour`, `user_new_privmsg`, `user_unread_privmsg`, `user_last_privmsg`, `user_message_rules`, `user_full_folder`, `user_emailtime`, `user_topic_show_days`, `user_topic_sortby_type`, `user_topic_sortby_dir`, `user_post_show_days`, `user_post_sortby_type`, `user_post_sortby_dir`, `user_notify`, `user_notify_pm`, `user_notify_type`, `user_allow_pm`, `user_allow_viewonline`, `user_allow_viewemail`, `user_allow_massemail`, `user_options`, `user_avatar`, `user_avatar_type`, `user_avatar_width`, `user_avatar_height`, `user_sig`, `user_sig_bbcode_uid`, `user_sig_bbcode_bitfield`, `user_from`, `user_icq`, `user_aim`, `user_yim`, `user_msnm`, `user_jabber`, `user_website`, `user_occ`, `user_interests`, `user_actkey`, `user_newpasswd`, `user_form_salt`, `user_new`, `user_reminded`, `user_reminded_time`) VALUES
-(1, 2, 1, '', 0, '', 1392567433, 'Anonymous', 'anonymous', '', 0, 0, '', 0, '', 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'd M Y H:i', 1, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2e9992b8d9e41de8', 1, 0, 0),
-(2, 3, 5, 'zik0zjzik0zjzik0zc\ni1cjyo000000\nzik0zjzi8sg0', 0, '127.0.0.1', 1392567433, 'root', 'root', '$H$9JK5/GX.DZMYQ9wHNpp1TcP6r60Js/.', 0, 0, 'habibiefaried@gmail.com', 369276442023, '', 1393157209, 0, 0, 'rating.php', '', 0, 0, 0, 0, 0, 0, 1, 'en', 'UTC', 'D M d, Y g:i a', 1, 1, 'AA0000', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1dfcc54ddcca7f24', 1, 0, 0),
-(3, 2, 6, '', 0, '', 1392567462, 'AdsBot [Google]', 'adsbot [google]', '', 1392567462, 0, '', 0, '', 0, 1392567462, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '846479b12dd319fd', 0, 0, 0),
-(4, 2, 6, '', 0, '', 1392567462, 'Alexa [Bot]', 'alexa [bot]', '', 1392567462, 0, '', 0, '', 0, 1392567462, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '00599fe8a97da3fc', 0, 0, 0),
-(5, 2, 6, '', 0, '', 1392567462, 'Alta Vista [Bot]', 'alta vista [bot]', '', 1392567462, 0, '', 0, '', 0, 1392567462, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'a667164678610824', 0, 0, 0),
-(6, 2, 6, '', 0, '', 1392567463, 'Ask Jeeves [Bot]', 'ask jeeves [bot]', '', 1392567463, 0, '', 0, '', 0, 1392567463, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e20719dd50f3cc05', 0, 0, 0),
-(7, 2, 6, '', 0, '', 1392567463, 'Baidu [Spider]', 'baidu [spider]', '', 1392567463, 0, '', 0, '', 0, 1392567463, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c0d1cbb6ef3ce966', 0, 0, 0),
-(8, 2, 6, '', 0, '', 1392567463, 'Bing [Bot]', 'bing [bot]', '', 1392567463, 0, '', 0, '', 0, 1392567463, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '67ac66b68b5e8f40', 0, 0, 0),
-(9, 2, 6, '', 0, '', 1392567463, 'Exabot [Bot]', 'exabot [bot]', '', 1392567463, 0, '', 0, '', 0, 1392567463, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'a382c54d2d851720', 0, 0, 0),
-(10, 2, 6, '', 0, '', 1392567464, 'FAST Enterprise [Crawler]', 'fast enterprise [crawler]', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e14100391f73f0e9', 0, 0, 0),
-(11, 2, 6, '', 0, '', 1392567464, 'FAST WebCrawler [Crawler]', 'fast webcrawler [crawler]', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c033e9f65ed9c532', 0, 0, 0),
-(12, 2, 6, '', 0, '', 1392567464, 'Francis [Bot]', 'francis [bot]', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '830af8f37471df6f', 0, 0, 0),
-(13, 2, 6, '', 0, '', 1392567464, 'Gigabot [Bot]', 'gigabot [bot]', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '65475b7f2521d32a', 0, 0, 0),
-(14, 2, 6, '', 0, '', 1392567464, 'Google Adsense [Bot]', 'google adsense [bot]', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0f53468af595c42c', 0, 0, 0),
-(15, 2, 6, '', 0, '', 1392567464, 'Google Desktop', 'google desktop', '', 1392567464, 0, '', 0, '', 0, 1392567464, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c66692c35f3a7186', 0, 0, 0),
-(16, 2, 6, '', 0, '', 1392567465, 'Google Feedfetcher', 'google feedfetcher', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2f95205a9cfdc059', 0, 0, 0),
-(17, 2, 6, '', 0, '', 1392567465, 'Google [Bot]', 'google [bot]', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '6a31bbc027b64698', 0, 0, 0),
-(18, 2, 6, '', 0, '', 1392567465, 'Heise IT-Markt [Crawler]', 'heise it-markt [crawler]', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'da2228c27ab3f1d5', 0, 0, 0),
-(19, 2, 6, '', 0, '', 1392567465, 'Heritrix [Crawler]', 'heritrix [crawler]', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'a03b9c4d3d7c00cd', 0, 0, 0),
-(20, 2, 6, '', 0, '', 1392567465, 'IBM Research [Bot]', 'ibm research [bot]', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'f32111d6c0952d69', 0, 0, 0),
-(21, 2, 6, '', 0, '', 1392567465, 'ICCrawler - ICjobs', 'iccrawler - icjobs', '', 1392567465, 0, '', 0, '', 0, 1392567465, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '05e722f50b640a0a', 0, 0, 0),
-(22, 2, 6, '', 0, '', 1392567465, 'ichiro [Crawler]', 'ichiro [crawler]', '', 1392567466, 0, '', 0, '', 0, 1392567466, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0299a1b0570210dd', 0, 0, 0),
-(23, 2, 6, '', 0, '', 1392567466, 'Majestic-12 [Bot]', 'majestic-12 [bot]', '', 1392567466, 0, '', 0, '', 0, 1392567466, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '9c56027f3ee527be', 0, 0, 0),
-(24, 2, 6, '', 0, '', 1392567466, 'Metager [Bot]', 'metager [bot]', '', 1392567466, 0, '', 0, '', 0, 1392567466, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '88e870d210a70269', 0, 0, 0),
-(25, 2, 6, '', 0, '', 1392567466, 'MSN NewsBlogs', 'msn newsblogs', '', 1392567466, 0, '', 0, '', 0, 1392567466, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '02bd44adec8244c9', 0, 0, 0),
-(26, 2, 6, '', 0, '', 1392567466, 'MSN [Bot]', 'msn [bot]', '', 1392567466, 0, '', 0, '', 0, 1392567466, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '97bb2820130e620f', 0, 0, 0),
-(27, 2, 6, '', 0, '', 1392567467, 'MSNbot Media', 'msnbot media', '', 1392567467, 0, '', 0, '', 0, 1392567467, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '65cea1f0c4811e9a', 0, 0, 0),
-(28, 2, 6, '', 0, '', 1392567467, 'Nutch [Bot]', 'nutch [bot]', '', 1392567467, 0, '', 0, '', 0, 1392567467, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '6ef55faa671133b4', 0, 0, 0),
-(29, 2, 6, '', 0, '', 1392567467, 'Online link [Validator]', 'online link [validator]', '', 1392567467, 0, '', 0, '', 0, 1392567467, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '35ca07bd84feb4ca', 0, 0, 0),
-(30, 2, 6, '', 0, '', 1392567467, 'psbot [Picsearch]', 'psbot [picsearch]', '', 1392567467, 0, '', 0, '', 0, 1392567467, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'f28eba31cb271aaf', 0, 0, 0),
-(31, 2, 6, '', 0, '', 1392567467, 'Sensis [Crawler]', 'sensis [crawler]', '', 1392567467, 0, '', 0, '', 0, 1392567467, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '63aa2bb34d45f5c3', 0, 0, 0),
-(32, 2, 6, '', 0, '', 1392567468, 'SEO Crawler', 'seo crawler', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '684772563782faa1', 0, 0, 0),
-(33, 2, 6, '', 0, '', 1392567468, 'Seoma [Crawler]', 'seoma [crawler]', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e44d99e43d9c869b', 0, 0, 0),
-(34, 2, 6, '', 0, '', 1392567468, 'SEOSearch [Crawler]', 'seosearch [crawler]', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ee51c054e1cac8d5', 0, 0, 0),
-(35, 2, 6, '', 0, '', 1392567468, 'Snappy [Bot]', 'snappy [bot]', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '8d20db2ce3406389', 0, 0, 0),
-(36, 2, 6, '', 0, '', 1392567468, 'Steeler [Crawler]', 'steeler [crawler]', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '553150bb9b0d92f5', 0, 0, 0),
-(37, 2, 6, '', 0, '', 1392567468, 'Telekom [Bot]', 'telekom [bot]', '', 1392567468, 0, '', 0, '', 0, 1392567468, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'b54f6cf03feb33d9', 0, 0, 0),
-(38, 2, 6, '', 0, '', 1392567468, 'TurnitinBot [Bot]', 'turnitinbot [bot]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '3234f1b5cba5e888', 0, 0, 0),
-(39, 2, 6, '', 0, '', 1392567469, 'Voyager [Bot]', 'voyager [bot]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '7150833205d1d8f2', 0, 0, 0),
-(40, 2, 6, '', 0, '', 1392567469, 'W3 [Sitesearch]', 'w3 [sitesearch]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'cb99fb419e319a8b', 0, 0, 0),
-(41, 2, 6, '', 0, '', 1392567469, 'W3C [Linkcheck]', 'w3c [linkcheck]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'b831d46641ac3e99', 0, 0, 0),
-(42, 2, 6, '', 0, '', 1392567469, 'W3C [Validator]', 'w3c [validator]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '7e3147cab216da63', 0, 0, 0),
-(43, 2, 6, '', 0, '', 1392567469, 'YaCy [Bot]', 'yacy [bot]', '', 1392567469, 0, '', 0, '', 0, 1392567469, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '771af83515217249', 0, 0, 0),
-(44, 2, 6, '', 0, '', 1392567470, 'Yahoo MMCrawler [Bot]', 'yahoo mmcrawler [bot]', '', 1392567470, 0, '', 0, '', 0, 1392567470, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'be9548732510be27', 0, 0, 0),
-(45, 2, 6, '', 0, '', 1392567470, 'Yahoo Slurp [Bot]', 'yahoo slurp [bot]', '', 1392567470, 0, '', 0, '', 0, 1392567470, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2bcf63ead2aa235c', 0, 0, 0),
-(46, 2, 6, '', 0, '', 1392567470, 'Yahoo [Bot]', 'yahoo [bot]', '', 1392567470, 0, '', 0, '', 0, 1392567470, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e6890a6147da2fc8', 0, 0, 0),
-(47, 2, 6, '', 0, '', 1392567470, 'YahooSeeker [Bot]', 'yahooseeker [bot]', '', 1392567470, 0, '', 0, '', 0, 1392567470, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0c119b11ca7fedef', 0, 0, 0);
+(1, 2, 1, 0x3030303030303030303030773237777267670a6931636a796f3030303030300a6931636a796f303030303030, 0, '', 1392616419, 'Anonymous', 'anonymous', '', 0, 0, '', 0, '', 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'd M Y H:i', 1, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '926f50e4a8a889f9', 1, 0, 0),
+(2, 3, 5, 0x7a696b307a6a7a696b307a6a7a696b307a630a6931636a796f3030303030300a7a696b307a6a7a6938736730, 0, '127.0.0.1', 1392616419, 'freedomofkeima', 'freedomofkeima', '$H$9hQQDqYzqNSM4I4qN.vTda2wX8v5JD1', 0, 0, 'iskandarsetiadi@students.itb.ac.id', 325272829334, '', 1393280647, 0, 1393229238, 'memberlist.php?mode=viewprofile&u=2', '', 0, 0, 0, 0, 0, 0, 3, 'en', 'UTC', 'D M d, Y g:i a', 1, 1, 'AA0000', 0, 0, 1392884941, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '88df66e6c31ccfdf', 1, 0, 0),
+(3, 2, 6, '', 0, '', 1392616454, 'AdsBot [Google]', 'adsbot [google]', '', 1392616454, 0, '', 0, '', 0, 1392616454, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'a0a473fe05fb63b5', 0, 0, 0),
+(4, 2, 6, '', 0, '', 1392616455, 'Alexa [Bot]', 'alexa [bot]', '', 1392616455, 0, '', 0, '', 0, 1392616455, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e94e3911760117d4', 0, 0, 0),
+(5, 2, 6, '', 0, '', 1392616455, 'Alta Vista [Bot]', 'alta vista [bot]', '', 1392616455, 0, '', 0, '', 0, 1392616455, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2daae9aa0157e3fc', 0, 0, 0),
+(6, 2, 6, '', 0, '', 1392616455, 'Ask Jeeves [Bot]', 'ask jeeves [bot]', '', 1392616455, 0, '', 0, '', 0, 1392616455, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '90b5de9eb94a64f0', 0, 0, 0),
+(7, 2, 6, '', 0, '', 1392616455, 'Baidu [Spider]', 'baidu [spider]', '', 1392616455, 0, '', 0, '', 0, 1392616455, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5d6e3d1605d16376', 0, 0, 0),
+(8, 2, 6, '', 0, '', 1392616455, 'Bing [Bot]', 'bing [bot]', '', 1392616455, 0, '', 0, '', 0, 1392616455, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '868af01c12fb6765', 0, 0, 0),
+(9, 2, 6, '', 0, '', 1392616455, 'Exabot [Bot]', 'exabot [bot]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ee94097d5cfea1a4', 0, 0, 0),
+(10, 2, 6, '', 0, '', 1392616456, 'FAST Enterprise [Crawler]', 'fast enterprise [crawler]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '989162716ab59fb8', 0, 0, 0),
+(11, 2, 6, '', 0, '', 1392616456, 'FAST WebCrawler [Crawler]', 'fast webcrawler [crawler]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '50f9aaf741ffa28f', 0, 0, 0),
+(12, 2, 6, '', 0, '', 1392616456, 'Francis [Bot]', 'francis [bot]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '44f6e037d2f76a4d', 0, 0, 0),
+(13, 2, 6, '', 0, '', 1392616456, 'Gigabot [Bot]', 'gigabot [bot]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '44a86f0e4014b9b2', 0, 0, 0),
+(14, 2, 6, '', 0, '', 1392616456, 'Google Adsense [Bot]', 'google adsense [bot]', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '329073dc767ac48b', 0, 0, 0),
+(15, 2, 6, '', 0, '', 1392616456, 'Google Desktop', 'google desktop', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'd70b302ea80e1d2b', 0, 0, 0),
+(16, 2, 6, '', 0, '', 1392616456, 'Google Feedfetcher', 'google feedfetcher', '', 1392616456, 0, '', 0, '', 0, 1392616456, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5833da03e1b6b58f', 0, 0, 0),
+(17, 2, 6, '', 0, '', 1392616457, 'Google [Bot]', 'google [bot]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1dd79168d40b4fbf', 0, 0, 0),
+(18, 2, 6, '', 0, '', 1392616457, 'Heise IT-Markt [Crawler]', 'heise it-markt [crawler]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5d6d8acbf16a52e9', 0, 0, 0),
+(19, 2, 6, '', 0, '', 1392616457, 'Heritrix [Crawler]', 'heritrix [crawler]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '3be7d108e385bd57', 0, 0, 0),
+(20, 2, 6, '', 0, '', 1392616457, 'IBM Research [Bot]', 'ibm research [bot]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '848e2d1f0d6c69a7', 0, 0, 0),
+(21, 2, 6, '', 0, '', 1392616457, 'ICCrawler - ICjobs', 'iccrawler - icjobs', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '36f81de0865ae889', 0, 0, 0),
+(22, 2, 6, '', 0, '', 1392616457, 'ichiro [Crawler]', 'ichiro [crawler]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '8cf11e9fb720e589', 0, 0, 0),
+(23, 2, 6, '', 0, '', 1392616457, 'Majestic-12 [Bot]', 'majestic-12 [bot]', '', 1392616457, 0, '', 0, '', 0, 1392616457, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c9c0c430a33ed1a8', 0, 0, 0),
+(24, 2, 6, '', 0, '', 1392616458, 'Metager [Bot]', 'metager [bot]', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c2527de606696710', 0, 0, 0),
+(25, 2, 6, '', 0, '', 1392616458, 'MSN NewsBlogs', 'msn newsblogs', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'fdead9669001446e', 0, 0, 0),
+(26, 2, 6, '', 0, '', 1392616458, 'MSN [Bot]', 'msn [bot]', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'bb1ce4d56bd8b9f2', 0, 0, 0),
+(27, 2, 6, '', 0, '', 1392616458, 'MSNbot Media', 'msnbot media', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'cb751d6c53bf3df3', 0, 0, 0),
+(28, 2, 6, '', 0, '', 1392616458, 'Nutch [Bot]', 'nutch [bot]', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '97e525d27b06c1b6', 0, 0, 0),
+(29, 2, 6, '', 0, '', 1392616458, 'Online link [Validator]', 'online link [validator]', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '7c9b2f4465782b8b', 0, 0, 0),
+(30, 2, 6, '', 0, '', 1392616458, 'psbot [Picsearch]', 'psbot [picsearch]', '', 1392616458, 0, '', 0, '', 0, 1392616458, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2907e879c2e35bd5', 0, 0, 0),
+(31, 2, 6, '', 0, '', 1392616459, 'Sensis [Crawler]', 'sensis [crawler]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '19c5272800c5e393', 0, 0, 0),
+(32, 2, 6, '', 0, '', 1392616459, 'SEO Crawler', 'seo crawler', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5a2dfe135297b450', 0, 0, 0),
+(33, 2, 6, '', 0, '', 1392616459, 'Seoma [Crawler]', 'seoma [crawler]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '401d725d435c45e3', 0, 0, 0),
+(34, 2, 6, '', 0, '', 1392616459, 'SEOSearch [Crawler]', 'seosearch [crawler]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'c6c9e7b9e68e96cd', 0, 0, 0),
+(35, 2, 6, '', 0, '', 1392616459, 'Snappy [Bot]', 'snappy [bot]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '6840861840ded45b', 0, 0, 0),
+(36, 2, 6, '', 0, '', 1392616459, 'Steeler [Crawler]', 'steeler [crawler]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '242b8b0f1afa62ac', 0, 0, 0),
+(37, 2, 6, '', 0, '', 1392616459, 'Telekom [Bot]', 'telekom [bot]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '503e17d6124b4bb4', 0, 0, 0),
+(38, 2, 6, '', 0, '', 1392616459, 'TurnitinBot [Bot]', 'turnitinbot [bot]', '', 1392616459, 0, '', 0, '', 0, 1392616459, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '94db793e2550b478', 0, 0, 0),
+(39, 2, 6, '', 0, '', 1392616460, 'Voyager [Bot]', 'voyager [bot]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '9feb541e2cc8ccc3', 0, 0, 0),
+(40, 2, 6, '', 0, '', 1392616460, 'W3 [Sitesearch]', 'w3 [sitesearch]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'd171f345b79c0a0d', 0, 0, 0),
+(41, 2, 6, '', 0, '', 1392616460, 'W3C [Linkcheck]', 'w3c [linkcheck]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '6ef6f71ff8fe878d', 0, 0, 0),
+(42, 2, 6, '', 0, '', 1392616460, 'W3C [Validator]', 'w3c [validator]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'f6696d6ad07e4df4', 0, 0, 0),
+(43, 2, 6, '', 0, '', 1392616460, 'YaCy [Bot]', 'yacy [bot]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ea28cf36bdb5e816', 0, 0, 0),
+(44, 2, 6, '', 0, '', 1392616460, 'Yahoo MMCrawler [Bot]', 'yahoo mmcrawler [bot]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '42ea690df7f8e787', 0, 0, 0),
+(45, 2, 6, '', 0, '', 1392616460, 'Yahoo Slurp [Bot]', 'yahoo slurp [bot]', '', 1392616460, 0, '', 0, '', 0, 1392616460, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '3f80489d1c8812e6', 0, 0, 0),
+(46, 2, 6, '', 0, '', 1392616461, 'Yahoo [Bot]', 'yahoo [bot]', '', 1392616461, 0, '', 0, '', 0, 1392616461, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'b80c60a8ef92eca0', 0, 0, 0),
+(47, 2, 6, '', 0, '', 1392616461, 'YahooSeeker [Bot]', 'yahooseeker [bot]', '', 1392616461, 0, '', 0, '', 0, 1392616461, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'en', 'UTC', 'D M d, Y g:i a', 1, 0, '9E8DA7', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 0, 1, 1, 0, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'd7f3f3d81af110ad', 0, 0, 0),
+(48, 0, 2, '', 0, '127.0.0.1', 1392884490, 'ryz', 'ryz', '$H$9hCFYBYisg/zmJ7C6HDm2sxl5TgMs8.', 1392884490, 0, 'freedom_holicx@yahoo.com', 56411520224, '', 1393229419, 1392884490, 1392884960, '', '', 0, 0, 0, 0, 0, 0, 1, 'en', 'Asia/Jakarta', 'D M d, Y g:i a', 1, 0, '', 1, 1, 1392884987, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', '', 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '6be220d82f7a6959', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3152,7 +3328,9 @@ INSERT INTO `phpbb_user_group` (`group_id`, `user_id`, `group_leader`, `user_pen
 (6, 44, 0, 0),
 (6, 45, 0, 0),
 (6, 46, 0, 0),
-(6, 47, 0, 0);
+(6, 47, 0, 0),
+(2, 48, 0, 0),
+(7, 48, 0, 0);
 
 -- --------------------------------------------------------
 
